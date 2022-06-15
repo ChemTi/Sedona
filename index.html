@@ -51,12 +51,12 @@
         <!-- about Sedona -->
         <div class="reasons__description">
           <h3>What is Sedona</h3>
-          <div>
+          <div class="reasons__description-text">
             <p>Настоящий городок</p>
             <span>— №1 —</span>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <div>
+          <div class="reasons__description-img">
             <img
               src="img/whatIsSedona-index.jpg"
               width="800"
@@ -68,16 +68,16 @@
         <!-- services -->
         <div class="reasons__services">
           <h3>Services</h3>
-          <ul class="services-list">
-            <li class="services-item">
+          <ul class="reasons__services-list">
+            <li class="reasons__services-item">
               <h4>Жильё</h4>
               <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
-            <li class="services-item">
+            <li class="reasons__services-item">
               <h4>Еда</h4>
               <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="services-item">
+            <li class="reasons__services-item">
               <h4>Сувениры</h4>
               <p>Не только китайского, но и местного производства!</p>
             </li>
@@ -86,7 +86,7 @@
         <!-- bridge of Devil -->
         <div class="reasons__attraction">
           <h3>Attraction</h3>
-          <div>
+          <div class="reasons__attraction-img">
             <img
               src="img/bridgeОfDevil-index.jpg"
               width="800"
@@ -94,7 +94,7 @@
               alt="Мост Дьявола"
             />
           </div>
-          <div>
+          <div class="reasons__attraction-text">
             <p>Там есть Мост дьявола</p>
             <span>— №2 —</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -103,18 +103,18 @@
         <!-- description about the town -->
         <div class="reasons__benefits">
           <h3>Benefits</h3>
-          <ul>
-            <li>
+          <ul class="reasons__benefits-list">
+            <li class="reasons__benefits-item">
               <h4>небольшая площадь</h4>
               <span>— №3 —</span>
               <p>все достопримечательности находятся очень близко</p>
             </li>
-            <li>
+            <li class="reasons__benefits-item">
               <h4>красивая дорога</h4>
               <span>— №4 —</span>
               <p>ехать в седону из лас-вегаса совсем не скучно!</p>
             </li>
-            <li>
+            <li class="reasons__benefits-item">
               <h4>мало туристов</h4>
               <span>— №5 —</span>
               <p>большинство едет в гранд каньон и толпится там</p>
@@ -122,77 +122,48 @@
           </ul>
         </div>
       </section>
-      <!-- offers -->
-      <section>
+      <!-- search -->
+      <section class="search" aria-label="search">
         <h2>Search a hotels</h2>
         <p>Заинтересовались?</p>
         <p>
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в седоне
         </p>
-        <a href="#">поиск гостиницы в седоне</a>
-        <!-- <div>
-          <form action="#" method="post">
-            <p>
-              <label
-                >Дата заезда:
-                <input type="date" value="2017-04-24" name="calendar-in" />
-              </label>
-            </p>
-            <p>
-              <label
-                >Дата выезда:
-                <input type="date" value="2017-06-04" name="calendar-out" />
-              </label>
-            </p>
-            <p>
-              <label
-                >Взрослые:
-                <input type="text" name="adults" />
-              </label>
-            </p>
-            <p>
-              <label
-                >Дети:
-                <input type="text" name="kinders" />
-              </label>
-            </p>
-            <p>
-              <a href="№">Найти</a>
-            </p>
-          </form>
-        </div> -->
+        <a class="search__button-search" href="#">поиск гостиницы в седоне</a>
       </section>
       <!-- map -->
-      <section>
+      <section class="map" aria-label="map">
         <h2>Map</h2>
         <img src="img/map-index.png" alt="Карта местности" />
       </section>
     </main>
     <!-- footer -->
-    <footer>
-      <section>
-        <h2>Find us</h2>
+    <footer class="main-footer">
+      <section class="main-footer__contacts">
+        <h2>Contacts</h2>
         <address>
-          <p><a href="#">#visitSEDONA</a></p>
-          <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
+          <a href="#">#visitSEDONA</a>
+          <a href="tel:+78005558628">+7 800 555-86-28</a>
         </address>
       </section>
-      <section>
+      <section class="main-footer__social">
         <h2>Lets make friends</h2>
-        <ul>
-          <li>
-            <a href="twitter.com">Twitter</a>
+        <ul class="main-footer__social-list">
+          <li class="main-footer__social-item">
+            <a class="main-footer__social-button" href="twitter.com">Twitter</a>
           </li>
-          <li>
-            <a href="facebook.com">Facebook</a>
+          <li class="main-footer__social-item">
+            <a class="main-footer__social-button" href="facebook.com"
+              >Facebook</a
+            >
           </li>
-          <li>
-            <a href="youtube.com">Youtube</a>
+          <li class="main-footer__social-item">
+            <a class="main-footer__social-button" href="youtube.com">Youtube</a>
           </li>
         </ul>
       </section>
-      <section>
+      <section class="main-footer__copyright">
         <h2>Copyright</h2>
         <p>
           Website by
@@ -200,6 +171,52 @@
         </p>
       </section>
     </footer>
+    <!-- modal search hotel -->
+    <section class="modal-search" aria-label="modal-search">
+      <form class="modal-search__form" action="#" method="post">
+        <p>
+          <label
+            >Дата заезда:
+            <input
+              class="modal-search__date-in"
+              type="date"
+              value="2017-04-24"
+              name="date-in"
+            />
+          </label>
+        </p>
+        <p>
+          <label
+            >Дата выезда:
+            <input
+              class="modal-search__date-out"
+              type="date"
+              value="2017-06-04"
+              name="date-out"
+            />
+          </label>
+        </p>
+        <p>
+          <label
+            >Взрослые:
+            <input
+              class="modal-search__adults-count"
+              type="text"
+              name="adults"
+            />
+          </label>
+        </p>
+        <p>
+          <label
+            >Дети:
+            <input class="modal-search__kids-count" type="text" name="kids" />
+          </label>
+        </p>
+        <p>
+          <a class="modal-search__button-find" href="№">Найти</a>
+        </p>
+      </form>
+    </section>
   </body>
 </html>
 

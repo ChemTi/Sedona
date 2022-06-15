@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,18 +11,18 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <title>Catalog</title>
   </head>
-  <body>
+  <body class="page-body">
     <!-- header -->
-    <header>
+    <header class="main-header">
       <!-- navigation bar -->
-      <nav>
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="№">Гостиницы</a></li>
+      <nav class="main-navigation">
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item"><a href="#">Информация</a></li>
+          <li class="main-navigation__item"><a href="#">Фото и видео</a></li>
+          <li class="main-navigation__item"><a href="#">Карта штата</a></li>
+          <li class="main-navigation__item"><a href="№">Гостиницы</a></li>
         </ul>
-        <a href="index.html">
+        <a class="main-navigation__logo" href="index.html">
           <img
             src="img/logo-index.png"
             width="138"
@@ -33,18 +33,23 @@
       </nav>
     </header>
     <!-- main -->
-    <main>
+    <main class="container">
       <h1>Страница каталога по выбору жилья</h1>
       <!-- filter -->
-      <section>
+      <section class="filter" aria-label="filter">
         <h2>Filter</h2>
-        <form action="https://echo.htmlacademy.ru/" method="get">
+        <form
+          class="filter__form"
+          action="https://echo.htmlacademy.ru/"
+          method="get"
+        >
           <fieldset>
             <legend>Инфраструктура:</legend>
-            <ul>
-              <li>
+            <ul class="filter__list-infrastructure">
+              <li class="filter__item-infrastructure">
                 <label
                   ><input
+                    class="filter__check-infrastructure"
                     type="checkbox"
                     name="pool-pool"
                     checked
@@ -52,18 +57,20 @@
                   />Бассейн</label
                 >
               </li>
-              <li>
+              <li class="filter__item-infrastructure">
                 <label
                   ><input
+                    class="filter__check-infrastructure"
                     type="checkbox"
                     name="parking-parking"
                     value="parking"
                   />Парковка</label
                 >
               </li>
-              <li>
+              <li class="filter__item-infrastructure">
                 <label
                   ><input
+                    class="filter__check-infrastructure"
                     type="checkbox"
                     name="wifi-wifi"
                     value="wifi"
@@ -74,10 +81,11 @@
           </fieldset>
           <fieldset>
             <legend>Тип жилья:</legend>
-            <ul>
-              <li>
+            <ul class="filter__list-infrastructure">
+              <li class="filter__item-infrastructure">
                 <label
                   ><input
+                    class="filter__check-infrastructure"
                     type="checkbox"
                     name="hotel-hotel"
                     value="hotel"
@@ -85,9 +93,10 @@
                   />Гостиница</label
                 >
               </li>
-              <li>
+              <li class="filter__item-infrastructure">
                 <label
                   ><input
+                    class="filter__check-infrastructure"
                     type="checkbox"
                     name="motel-motel"
                     value="motel"
@@ -95,9 +104,10 @@
                   />Мотель</label
                 >
               </li>
-              <li>
+              <li class="filter__item-infrastructure">
                 <label
                   ><input
+                    class="filter__check-infrastructure"
                     type="checkbox"
                     name="appartment-appartment"
                     value="appartment"
@@ -109,11 +119,15 @@
           </fieldset>
           <fieldset>
             <legend>Стоимость в сутки, <span>₽</span>:</legend>
-            <label>от<input type="text" value="0" /></label>
-            <label>до<input type="text" value="3000" /></label>
+            <label
+              >от<input class="filter__range-count" type="text" value="0"
+            /></label>
+            <label
+              >до<input class="filter__range-count" type="text" value="3000"
+            /></label>
           </fieldset>
-          <!-- there will be range bar -->
-          <button type="submit">Показать</button>
+          <!-- there should be range bar -->
+          <button class="filter__button" type="button"submit">Показать</button>
         </form>
       </section>
       <!-- breadcrumbs -->
