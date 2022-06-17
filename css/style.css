@@ -1,3 +1,5 @@
+/* -------------------------------fonts------------------------------- */
+
 @font-face {
   font-family: "PT Sans";
   font-weight: 400;
@@ -16,6 +18,57 @@
        url("/fonts/PTSans-Bold.woff") format("woff");
 }
 
+/* -------------------------------variables------------------------------- */
+
+:root {
+  --white-smoke: #F2F2F2;
+  --basic-white: #FFFFFF;
+  --whisper: #EEEEEE;
+  --basic-black: #000000;
+  --night-rider: #333333;
+  --roman-coffee: #766357;
+  --dim-gray: #666666;
+  --seagull: #81B3D3;
+  --seagull-block: #81B3D2;
+  --light-green: #C5DFB9;
+}
+
+/* -------------------------------global------------------------------- */
+
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--white-smoke);
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul li {
+  list-style: none;
+}
 
 .visually-hidden {
   position: absolute;
@@ -33,3 +86,186 @@
 .display-none {
   display: none;
 }
+
+
+/* -------------------------------header------------------------------- */
+
+/* navigation bar */
+
+.navigation {
+  font-size: 14px;
+  line-height: 26px;
+  background-color: transparent;
+}
+
+.navigation__wrapper {
+  background-color: var(--basic-white);
+}
+
+.navigation__item a {
+  color: var(--basic-black);
+}
+
+.navigation__item a:hover {
+  color: var(--seagull-block);
+}
+
+.navigation__item a:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.navigation__item a:active {
+  color: var(--roman-coffee);
+}
+
+/* -------------------------------main------------------------------- */
+
+.container {
+  background-color: var(--basic-white);
+}
+
+/* banner */
+
+.banner__description h3 {
+  line-height: 26px;
+}
+
+.banner__description p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--night-rider);
+}
+
+.banner__description {
+  text-align: center;
+}
+
+/* about Sedona */
+
+.reasons__description-background {
+  background-color: var(--seagull-block);
+}
+
+.reasons__description-text h4,
+.reasons__description-text span,
+.reasons__description-text p {
+  color: var(--basic-white);
+}
+
+.reasons__description-text span,
+.reasons__description-text p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* services */
+
+.reasons__services-item p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--night-rider);
+}
+
+/* bridge of Devil */
+
+.reasons__attraction-text h4,
+.reasons__attraction-text span,
+.reasons__attraction-text p {
+  color: var(--basic-white);
+}
+
+.reasons__attraction-text span,
+.reasons__attraction-text p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.reasons__attraction-background {
+  background-color: var(--seagull-block);
+}
+
+/* description about the town */
+
+.reasons__benefits-background {
+  background-color: var(--whisper);
+}
+
+.reasons__benefits-item span,
+.reasons__benefits-item p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--night-rider);
+}
+
+/* search */
+
+.search h3 {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.search p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.search__button-search {
+  color: var(--basic-white);
+  background-color: var(--roman-coffee);
+}
+
+.search h3,
+.search p,
+.search a {
+  text-align: center;
+}
+
+/* map */
+
+.map__background {
+  background-color: var(--light-green);
+  width: 1200px;
+  height: 594px;
+}
+
+/* -------------------------------footer------------------------------- */
+
+.footer__contacts a {
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.footer__copyright p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+/* -------------------------------modal search hotel------------------------------- */
+
+.modal-search__form label {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.modal-search__date-in[value="24 апреля 2017"],
+.modal-search__date-out[value="4 июля 2017"],
+.modal-search__adults-count[value="2"],
+.modal-search__kids-count[value="0"] {
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-black);
+  text-transform: inherit;
+}
+
+.modal-search__button-find {
+  line-height: 26px;
+  color: var(--basic-white);
+  background-color: var(--seagull-block);
+}
+
