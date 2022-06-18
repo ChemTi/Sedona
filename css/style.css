@@ -23,10 +23,12 @@
 :root {
   --white-smoke: #F2F2F2;
   --basic-white: #FFFFFF;
+  --basic-white-rgba: rgba(255, 255, 255, 0.3);
   --whisper: #EEEEEE;
   --whisper-hover: #EBEBEB;
   --whisper-focus: #E5E5E5;
   --basic-black: #000000;
+  --basic-black-rgba: rgba(0, 0, 0, 0.3);
   --night-rider: #333333;
   --roman-coffee: #766357;
   --roman-coffee-hover: #604E43;
@@ -125,7 +127,7 @@ ul li {
   color: var(--roman-coffee);
 }
 
-.navigation__item_current a {
+.navigation__item-current a {
   color: var(--roman-coffee);
 }
 /* -------------------------------main------------------------------- */
@@ -231,7 +233,7 @@ ul li {
 }
 
 .search__button-search:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-white-rgba)
   background-color: var(--roman-coffee-active);
 }
 
@@ -264,14 +266,19 @@ ul li {
   color: var(--basic-white);
 }
 
-.filter__item-infrastructure label,
-.filter__form fieldset:nth-child(3) label,
-.filter__range-count[value="0"],
-.filter__range-count[value="3000"],
+.filter__form label,
+.filter__range-count::placeholder,
+.filter__range-count::placeholder,
+.filter__range-count[type="text"],
 .filter__button {
   font-size: 14px;
   font-weight: 400;
   color: var(--basic-white);
+}
+
+.filter__range-count {
+  border: none;
+  background-color: transparent;
 }
 
 .filter__button {
@@ -286,7 +293,60 @@ ul li {
   background-color: var(--basic-white);
 }
 
+/* breadcrumbs */
 
+.breadcrumbs__sort-list li:nth-child(1) {
+  line-height: 26px;
+}
+
+.breadcrumbs__sort-item a {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
+
+.breadcrumbs__sort-current a {
+  color: var(--seagull-block);
+}
+
+.breadcrumbs__sort-notcurrent a {
+  color: var(--basic-black-rgba);
+  text-decoration: underline var(--seagull-block) dotted;
+}
+
+/* show hotels */
+
+.show__list h3 {
+  line-height: 26px;
+}
+
+.show__item-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--night-rider);
+}
+
+.show__item-rating {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dim-gray);
+  background-color: var(--white-smoke);
+}
+
+.show__item-detail,
+.show__item-reservation {
+  font-size: 14px;
+  color: var(--basic-white);
+}
+
+.show__item-detail {
+  background-color: var(--seagull-block);
+}
+
+.show__item-reservation {
+  background-color: var(--roman-coffee);
+}
 
 /* -------------------------------footer------------------------------- */
 
@@ -299,6 +359,10 @@ ul li {
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
+}
+
+.footer__wrapper {
+  background-color: var(--basic-white);
 }
 
 /* -------------------------------modal search hotel------------------------------- */
@@ -356,7 +420,7 @@ ul li {
 }
 
 .modal-search__button-find:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-white-rgba)
   background-color: var(--seagull-block-active);
 }
 
