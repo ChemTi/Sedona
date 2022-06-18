@@ -23,13 +23,21 @@
 :root {
   --white-smoke: #F2F2F2;
   --basic-white: #FFFFFF;
+  --basic-white-rgba: rgba(255, 255, 255, 0.3);
   --whisper: #EEEEEE;
+  --whisper-hover: #EBEBEB;
+  --whisper-focus: #E5E5E5;
   --basic-black: #000000;
+  --basic-black-rgba: rgba(0, 0, 0, 0.3);
   --night-rider: #333333;
   --roman-coffee: #766357;
+  --roman-coffee-hover: #604E43;
+  --roman-coffee-active: #503E33;
   --dim-gray: #666666;
   --seagull: #81B3D3;
   --seagull-block: #81B3D2;
+  --seagull-block-hover: #669EC0;
+  --seagull-block-active: #5496BD;
   --light-green: #C5DFB9;
 }
 
@@ -119,6 +127,9 @@ ul li {
   color: var(--roman-coffee);
 }
 
+.navigation__item-current a {
+  color: var(--roman-coffee);
+}
 /* -------------------------------main------------------------------- */
 
 .container {
@@ -212,8 +223,18 @@ ul li {
 }
 
 .search__button-search {
+  padding: 30px 125px;
   color: var(--basic-white);
   background-color: var(--roman-coffee);
+}
+
+.search__button-search:hover {
+  background-color: var(--roman-coffee-hover);
+}
+
+.search__button-search:active {
+  color: var(--basic-white-rgba)
+  background-color: var(--roman-coffee-active);
 }
 
 .search h3,
@@ -230,6 +251,103 @@ ul li {
   height: 594px;
 }
 
+/* filter */
+
+.filter__background {
+  background: var(--seagull-block) url("/img/background_filter-catalog.png") 0 0 no-repeat;
+}
+
+.filter__background fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 16px;
+  color: var(--basic-white);
+}
+
+.filter__form label,
+.filter__range-count::placeholder,
+.filter__range-count::placeholder,
+.filter__range-count[type="text"],
+.filter__button {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+.filter__range-count {
+  border: none;
+  background-color: transparent;
+}
+
+.filter__button {
+  text-transform: uppercase;
+  border: 2px solid var(--basic-white);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.filter__button:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+/* breadcrumbs */
+
+.breadcrumbs__sort-list li:nth-child(1) {
+  line-height: 26px;
+}
+
+.breadcrumbs__sort-item a {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
+
+.breadcrumbs__sort-current a {
+  color: var(--seagull-block);
+}
+
+.breadcrumbs__sort-notcurrent a {
+  color: var(--basic-black-rgba);
+  text-decoration: underline var(--seagull-block) dotted;
+}
+
+/* show hotels */
+
+.show__list h3 {
+  line-height: 26px;
+}
+
+.show__item-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--night-rider);
+}
+
+.show__item-rating {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dim-gray);
+  background-color: var(--white-smoke);
+}
+
+.show__item-detail,
+.show__item-reservation {
+  font-size: 14px;
+  color: var(--basic-white);
+}
+
+.show__item-detail {
+  background-color: var(--seagull-block);
+}
+
+.show__item-reservation {
+  background-color: var(--roman-coffee);
+}
+
 /* -------------------------------footer------------------------------- */
 
 .footer__contacts a {
@@ -243,11 +361,23 @@ ul li {
   line-height: 26px;
 }
 
+.footer__wrapper {
+  background-color: var(--basic-white);
+}
+
 /* -------------------------------modal search hotel------------------------------- */
+
+.modal-search {
+  background-color: var(--basic-white);
+}
 
 .modal-search__form label {
   font-size: 14px;
   line-height: 26px;
+}
+
+.modal-search__form input {
+  border: none;
 }
 
 .modal-search__date-in[value="24 апреля 2017"],
@@ -261,6 +391,22 @@ ul li {
   line-height: 26px;
   color: var(--basic-black);
   text-transform: inherit;
+  background-color: var(--white-smoke);
+}
+
+.modal-search__date-in[value="24 апреля 2017"]:hover,
+.modal-search__date-out[value="4 июля 2017"]:hover,
+.modal-search__adults-count[value="2"]:hover,
+.modal-search__kids-count[value="0"]:hover {
+  background-color: var(--whisper-hover);
+}
+
+.modal-search__date-in[value="24 апреля 2017"]:focus,
+.modal-search__date-out[value="4 июля 2017"]:focus,
+.modal-search__adults-count[value="2"]:focus,
+.modal-search__kids-count[value="0"]:focus {
+  border: 2px solid var(--whisper-focus);
+  background-color: var(--basic-white);
 }
 
 .modal-search__button-find {
@@ -268,4 +414,14 @@ ul li {
   color: var(--basic-white);
   background-color: var(--seagull-block);
 }
+
+.modal-search__button-find:hover {
+  background-color: var(--seagull-block-hover);
+}
+
+.modal-search__button-find:active {
+  color: var(--basic-white-rgba)
+  background-color: var(--seagull-block-active);
+}
+
 

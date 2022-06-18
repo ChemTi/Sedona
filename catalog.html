@@ -21,30 +21,32 @@
     <header class="header">
       <!-- navigation bar -->
       <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item"><a href="#">Информация</a></li>
-          <li class="navigation__item"><a href="#">Фото и видео</a></li>
-          <li class="navigation__item"><a href="#">Карта штата</a></li>
-          <li class="navigation__item navigation__item_current"><a href="#">№">Гостиницы</a></li>
-        </ul>
-        <a class="navigation__logo" href="index.html">
-          <img
-            src="img/logo-index.png"
-            width="138"
-            height="70"
-            alt="Логотип городка Седона"
-          />
-        </a>
+        <div class="navigation__wrapper">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="#">Информация</a></li>
+            <li class="navigation__item"><a href="#">Фото и видео</a></li>
+            <li class="navigation__item"><a href="#">Карта штата</a></li>
+            <li class="navigation__item navigation__item-current"><a href="#">Гостиницы</a></li>
+          </ul>
+          <a class="navigation__logo" href="index.html">
+            <img
+              src="img/logo-index.png"
+              width="138"
+              height="70"
+              alt="Логотип городка Седона"
+            />
+          </a>
+        </div>
       </nav>
     </header>
     <!-- main -->
     <main class="container">
-      <h1>Страница каталога по выбору жилья</h1>
+      <h1 class="visually-hidden">Страница каталога по выбору жилья</h1>
       <!-- filter -->
       <section class="filter" aria-label="filter">
-        <h2>Filter</h2>
+        <h2 class="visually-hidden">Filter</h2>
         <form
-          class="filter__form"
+          class="filter__form filter__background"
           action="https://echo.htmlacademy.ru/"
           method="get"
         >
@@ -124,31 +126,37 @@
           </fieldset>
           <fieldset>
             <legend>Стоимость в сутки, <span>₽</span>:</legend>
-            <label
-              >от<input class="filter__range-count" type="text" value="0"
-            /></label>
-            <label
-              >до<input class="filter__range-count" type="text" value="3000"
-            /></label>
+            <ul class="filter__list-cost">
+              <li class="filter__item-cost">
+                <label
+                  >от<input class="filter__range-count" type="text" placeholder="0"/>
+                </label>
+            </li>
+            <li class="filter__item-cost">
+              <label
+              >до<input class="filter__range-count" type="text" placeholder="3000"/>
+              </label>
+            </li>
+          </ul>
           </fieldset>
           <!-- there should be range bar -->
-          <button class="filter__button" type="button"submit">Показать</button>
+          <button class="filter__button" type="submit">показать</button>
         </form>
       </section>
       <!-- breadcrumbs -->
       <section class="breadcrumbs" aria-label="breadcrumbs">
-        <h2>Bread crumbs</h2>
-        <span>Найдено:<span>3</span></span>
-        <span>Сортировка:</span>
+        <h2 class="visually-hidden">Breadcrumbs</h2>
         <ul class="breadcrumbs__sort-list">
-          <li class="breadcrumbs__sort-item"><a href="#">По цене</a></li>
-          <li class="breadcrumbs__sort-item"><a href="#">По типу</a></li>
-          <li class="breadcrumbs__sort-item"><a href="#">По рейтингу</a></li>
+          <li class="breadcrumbs__sort-item"><span>найдено: <span class="breadcrumbs__count">3</span></span></li>
+          <li class="breadcrumbs__sort-item"><span>сортировка:</span></li>
+          <li class="breadcrumbs__sort-item breadcrumbs__sort-current"><a href="#">по цене</a></li>
+          <li class="breadcrumbs__sort-item breadcrumbs__sort-notcurrent"><a href="#">по типу</a></li>
+          <li class="breadcrumbs__sort-item breadcrumbs__sort-notcurrent"><a href="#">по рейтингу</a></li>
         </ul>
       </section>
       <!-- show hotels -->
       <section class="show" aria-label="show">
-        <h2>Show hotels</h2>
+        <h2 class="visually-hidden">Show hotels</h2>
         <ul class="show__list">
           <li class="show__item">
             <a href="#"
@@ -159,12 +167,12 @@
                 alt="Отель Amara Resort & Spa"
             /></a>
             <h3>Amara Resort & Spa</h3>
-            <p>
+            <p class="show__item-text">
               гостиница <span>от 4000 <span>₽</span></span>
             </p>
-            <a href="#">подробнее</a>
-            <a href="#">забронировать</a>
-            <p>рейтинг: 8,5</p>
+            <a class="show__item-detail" href="#">подробнее</a>
+            <a class="show__item-reservation" href="#">забронировать</a>
+            <p class="show__item-rating">рейтинг: 8,5</p>
           </li>
           <li class="show__item">
             <a href="#"
@@ -175,12 +183,12 @@
                 alt="Мотель Desert Quail Inn"
             /></a>
             <h3>Desert Quail Inn</h3>
-            <p>
+            <p class="show__item-text">
               мотель <span>от 3000 <span>₽</span></span>
             </p>
-            <a href="#">подробнее</a>
-            <a href="#">забронировать</a>
-            <p>рейтинг: 8,9</p>
+            <a class="show__item-detail" href="#">подробнее</a>
+            <a class="show__item-reservation" href="#">забронировать</a>
+            <p class="show__item-rating">рейтинг: 8,9</p>
           </li>
           <li class="show__item">
             <a href="#"
@@ -191,46 +199,48 @@
                 alt="Апартаменты Villas at Poco Diablo"
             /></a>
             <h3>Villas at Poco Diablo</h3>
-            <p>
+            <p class="show__item-text">
               апартаменты <span>От 2000 <span>₽</span></span>
             </p>
-            <a href="#">подробнее</a>
-            <a href="#">забронировать</a>
-            <p>рейтинг: 9,2</p>
+            <a class="show__item-detail" href="#">подробнее</a>
+            <a class="show__item-reservation" href="#">забронировать</a>
+            <p class="show__item-rating">рейтинг: 9,2</p>
           </li>
         </ul>
       </section>
     </main>
     <!-- footer -->
     <footer class="footer">
-      <section  class="footer__contacts" aria-label="contacts">
-        <h2>Contacts</h2>
-        <address>
-          <a href="#">#visitSEDONA</a>
-          <a href="tel:+78005558628">+7 800 555-86-28</a>
-        </address>
-      </section>
-      <section class="footer__social" aria-label="social">
-        <h2>Lets make friends</h2>
-        <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a href="twitter.com">Twitter</a>
-          </li>
-          <li class="footer__social-item">
-            <a href="facebook.com">Facebook</a>
-          </li>
-          <li class="footer__social-item">
-            <a href="youtube.com">Youtube</a>
-          </li>
-        </ul>
-      </section>
-      <section class="footer__copyright" aria-label="copyright">
-        <h2>Copyright</h2>
-        <p>
-          Website by
-          <a href="https://htmlacademy.ru/intensive/htmlcss"></a>
-        </p>
-      </section>
+      <div class="footer__wrapper">
+        <section class="footer__contacts" aria-label="contacts">
+          <h2 class="visually-hidden">Contacts</h2>
+          <address>
+            <a href="#">#visitSEDONA</a>
+            <a href="tel:+78005558628">+7 800 555-86-28</a>
+          </address>
+        </section>
+        <section class="footer__social" aria-label="social">
+          <h2 class="visually-hidden">Lets make friends</h2>
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-button" href="twitter.com">Twitter</a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-button" href="facebook.com">Facebook</a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-button" href="youtube.com">Youtube</a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer__copyright" aria-label="copyright">
+          <h2 class="visually-hidden">Copyright</h2>
+          <p>
+            Website by
+            <a href="https://htmlacademy.ru/intensive/htmlcss"></a>
+          </p>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
