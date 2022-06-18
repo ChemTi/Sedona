@@ -21,30 +21,32 @@
     <header class="header">
       <!-- navigation bar -->
       <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item"><a href="#">Информация</a></li>
-          <li class="navigation__item"><a href="#">Фото и видео</a></li>
-          <li class="navigation__item"><a href="#">Карта штата</a></li>
-          <li class="navigation__item navigation__item_current"><a href="#">№">Гостиницы</a></li>
-        </ul>
-        <a class="navigation__logo" href="index.html">
-          <img
-            src="img/logo-index.png"
-            width="138"
-            height="70"
-            alt="Логотип городка Седона"
-          />
-        </a>
+        <div class="navigation__wrapper">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="#">Информация</a></li>
+            <li class="navigation__item"><a href="#">Фото и видео</a></li>
+            <li class="navigation__item"><a href="#">Карта штата</a></li>
+            <li class="navigation__item navigation__item_current"><a href="#">Гостиницы</a></li>
+          </ul>
+          <a class="navigation__logo" href="index.html">
+            <img
+              src="img/logo-index.png"
+              width="138"
+              height="70"
+              alt="Логотип городка Седона"
+            />
+          </a>
+        </div>
       </nav>
     </header>
     <!-- main -->
     <main class="container">
-      <h1>Страница каталога по выбору жилья</h1>
+      <h1 class="visually-hidden">Страница каталога по выбору жилья</h1>
       <!-- filter -->
       <section class="filter" aria-label="filter">
-        <h2>Filter</h2>
+        <h2 class="visually-hidden">Filter</h2>
         <form
-          class="filter__form"
+          class="filter__form filter__background"
           action="https://echo.htmlacademy.ru/"
           method="get"
         >
@@ -124,15 +126,16 @@
           </fieldset>
           <fieldset>
             <legend>Стоимость в сутки, <span>₽</span>:</legend>
-            <label
+            <ul><label
               >от<input class="filter__range-count" type="text" value="0"
             /></label>
             <label
               >до<input class="filter__range-count" type="text" value="3000"
             /></label>
+          </ul>
           </fieldset>
           <!-- there should be range bar -->
-          <button class="filter__button" type="button"submit">Показать</button>
+          <button class="filter__button" type="button"submit">показать</button>
         </form>
       </section>
       <!-- breadcrumbs -->
