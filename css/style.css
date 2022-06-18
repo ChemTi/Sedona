@@ -4,18 +4,20 @@
   font-family: "PT Sans";
   font-weight: 400;
   font-style: normal;
-  src: local("PT Sans")
-       url("/fonts/PTSans.woff2") format("woff2"),
-       url("/fonts/PTSans.woff") format("woff");
+  src:
+      local("PT Sans")
+      url("/fonts/PTSans.woff2") format("woff2"),
+      url("/fonts/PTSans.woff") format("woff");
 }
 
 @font-face {
   font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
-  src: local("PT Sans")
-       url("/fonts/PTSans-Bold.woff2") format("woff2"),
-       url("/fonts/PTSans-Bold.woff") format("woff");
+  src:
+      local("PT Sans")
+      url("/fonts/PTSans-Bold.woff2") format("woff2"),
+      url("/fonts/PTSans-Bold.woff") format("woff");
 }
 
 /* -------------------------------variables------------------------------- */
@@ -233,7 +235,7 @@ ul li {
 }
 
 .search__button-search:active {
-  color: var(--basic-white-rgba)
+  color: var(--basic-white-rgba);
   background-color: var(--roman-coffee-active);
 }
 
@@ -420,7 +422,7 @@ ul li {
 }
 
 .modal-search__button-find:active {
-  color: var(--basic-white-rgba)
+  color: var(--basic-white-rgba);
   background-color: var(--seagull-block-active);
 }
 
