@@ -129,12 +129,17 @@
             <ul class="filter__list-cost">
               <li class="filter__item-cost">
                 <label
-                  >от<input class="filter__range-count" type="text" placeholder="0"/>
+                  >от<input class="filter__range-count" type="number" placeholder="0"/>
                 </label>
             </li>
             <li class="filter__item-cost">
               <label
-              >до<input class="filter__range-count" type="text" placeholder="3000"/>
+              >до<input class="filter__range-count" type="number" placeholder="3000"/>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="range" name="cost-min" min="0" max="3000" value="0">
               </label>
             </li>
           </ul>
