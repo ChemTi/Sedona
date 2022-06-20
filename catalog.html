@@ -26,7 +26,9 @@
             <li class="navigation__item"><a href="#">Информация</a></li>
             <li class="navigation__item"><a href="#">Фото и видео</a></li>
             <li class="navigation__item"><a href="#">Карта штата</a></li>
-            <li class="navigation__item navigation__item-current"><a href="#">Гостиницы</a></li>
+            <li class="navigation__item navigation__item-current">
+              <a href="#">Гостиницы</a>
+            </li>
           </ul>
           <a class="navigation__logo" href="index.html">
             <img
@@ -129,20 +131,43 @@
             <ul class="filter__list-cost">
               <li class="filter__item-cost">
                 <label
-                  >от<input class="filter__range-count" type="number" placeholder="0"/>
+                  >от<input
+                    class="filter__range-count"
+                    type="number"
+                    placeholder="0"
+                  />
                 </label>
-            </li>
-            <li class="filter__item-cost">
-              <label
-              >до<input class="filter__range-count" type="number" placeholder="3000"/>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="range" name="cost-min" min="0" max="3000" value="0">
-              </label>
-            </li>
-          </ul>
+              </li>
+              <li class="filter__item-cost">
+                <label
+                  >до<input
+                    class="filter__range-count"
+                    type="number"
+                    placeholder="3000"
+                  />
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="range"
+                    name="cost-min"
+                    min="0"
+                    max="3000"
+                    value="0"
+                  />
+                </label>
+                <label>
+                  <input
+                    type="range"
+                    name="cost-min"
+                    min="0"
+                    max="3000"
+                    value="0"
+                  />
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <!-- there should be range bar -->
           <button class="filter__button" type="submit">показать</button>
@@ -152,11 +177,19 @@
       <section class="breadcrumbs" aria-label="breadcrumbs">
         <h2 class="visually-hidden">Breadcrumbs</h2>
         <ul class="breadcrumbs__sort-list">
-          <li class="breadcrumbs__sort-item"><span>найдено: <span class="breadcrumbs__count">3</span></span></li>
+          <li class="breadcrumbs__sort-item">
+            <span>найдено: <span class="breadcrumbs__count">3</span></span>
+          </li>
           <li class="breadcrumbs__sort-item"><span>сортировка:</span></li>
-          <li class="breadcrumbs__sort-item breadcrumbs__sort-current"><a href="#">по цене</a></li>
-          <li class="breadcrumbs__sort-item breadcrumbs__sort-notcurrent"><a href="#">по типу</a></li>
-          <li class="breadcrumbs__sort-item breadcrumbs__sort-notcurrent"><a href="#">по рейтингу</a></li>
+          <li class="breadcrumbs__sort-item breadcrumbs__sort-current">
+            <a href="#">по цене</a>
+          </li>
+          <li class="breadcrumbs__sort-item breadcrumbs__sort-notcurrent">
+            <a href="#">по типу</a>
+          </li>
+          <li class="breadcrumbs__sort-item breadcrumbs__sort-notcurrent">
+            <a href="#">по рейтингу</a>
+          </li>
         </ul>
       </section>
       <!-- show hotels -->
@@ -164,52 +197,76 @@
         <h2 class="visually-hidden">Show hotels</h2>
         <ul class="show__list">
           <li class="show__item">
-            <a href="#"
-              ><img
-                src="img/hotels_Amara-catalog.png"
-                width="135"
-                height="90"
-                alt="Отель Amara Resort & Spa"
-            /></a>
-            <h3>Amara Resort & Spa</h3>
-            <p class="show__item-text">
-              гостиница <span>от 4000 <span>₽</span></span>
-            </p>
-            <a class="show__item-detail" href="#">подробнее</a>
-            <a class="show__item-reservation" href="#">забронировать</a>
-            <p class="show__item-rating">рейтинг: 8,5</p>
+            <ul class="show__list-list">
+              <li class="show__item-item">
+                <a href="#"
+                  ><img
+                    src="img/hotels_Amara-catalog.png"
+                    width="135"
+                    height="90"
+                    alt="Отель Amara Resort & Spa"
+                /></a>
+              </li>
+              <li class="show__item-item">
+                <h3>Amara Resort & Spa</h3>
+                <p class="show__item-text">
+                  гостиница <span>от 4000 <span>₽</span></span>
+                </p>
+                <a class="show__item-detail" href="#">подробнее</a>
+                <a class="show__item-reservation" href="#">забронировать</a>
+              </li>
+              <li class="show__item-item">
+                <p class="show__item-rating">рейтинг: 8,5</p>
+              </li>
+            </ul>
           </li>
           <li class="show__item">
-            <a href="#"
-              ><img
-                src="img/hotels_Desert-catalog.png"
-                width="135"
-                height="90"
-                alt="Мотель Desert Quail Inn"
-            /></a>
-            <h3>Desert Quail Inn</h3>
-            <p class="show__item-text">
-              мотель <span>от 3000 <span>₽</span></span>
-            </p>
-            <a class="show__item-detail" href="#">подробнее</a>
-            <a class="show__item-reservation" href="#">забронировать</a>
-            <p class="show__item-rating">рейтинг: 8,9</p>
+            <ul class="show__list-list">
+              <li class="show__item-item">
+                <a href="#"
+                  ><img
+                    src="img/hotels_Desert-catalog.png"
+                    width="135"
+                    height="90"
+                    alt="Мотель Desert Quail Inn"
+                /></a>
+              </li>
+              <li class="show__item-item">
+                <h3>Desert Quail Inn</h3>
+                <p class="show__item-text">
+                  мотель <span>от 3000 <span>₽</span></span>
+                </p>
+                <a class="show__item-detail" href="#">подробнее</a>
+                <a class="show__item-reservation" href="#">забронировать</a>
+              </li>
+              <li class="show__item-item">
+                <p class="show__item-rating">рейтинг: 8,9</p>
+              </li>
+            </ul>
           </li>
           <li class="show__item">
-            <a href="#"
-              ><img
-                src="img/hotels_Villas-catalog.png"
-                width="135"
-                height="90"
-                alt="Апартаменты Villas at Poco Diablo"
-            /></a>
-            <h3>Villas at Poco Diablo</h3>
-            <p class="show__item-text">
-              апартаменты <span>От 2000 <span>₽</span></span>
-            </p>
-            <a class="show__item-detail" href="#">подробнее</a>
-            <a class="show__item-reservation" href="#">забронировать</a>
-            <p class="show__item-rating">рейтинг: 9,2</p>
+            <ul class="show__list-list">
+              <li class="show__item-item">
+                <a href="#"
+                  ><img
+                    src="img/hotels_Villas-catalog.png"
+                    width="135"
+                    height="90"
+                    alt="Апартаменты Villas at Poco Diablo"
+                /></a>
+              </li>
+              <li class="show__item-item">
+                <h3>Villas at Poco Diablo</h3>
+                <p class="show__item-text">
+                  апартаменты <span>От 2000 <span>₽</span></span>
+                </p>
+                <a class="show__item-detail" href="#">подробнее</a>
+                <a class="show__item-reservation" href="#">забронировать</a>
+              </li>
+              <li class="show__item-item">
+                <p class="show__item-rating">рейтинг: 9,2</p>
+              </li>
+            </ul>
           </li>
         </ul>
       </section>
