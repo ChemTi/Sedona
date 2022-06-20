@@ -45,7 +45,7 @@
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
@@ -123,14 +123,26 @@ img {
 
 /* banner */
 
-.banner__description h3 {
+.banner__item-img {
+  width: 1200px;
+  height: 509px;
+  background: var(--seagull) url("/img/welcomePic.jpg") no-repeat;
+}
+
+.banner__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.banner__item-description h3 {
   font-size: inherit;
   font-weight: inherit;
   line-height: 26px;
   margin: 0;
 }
 
-.banner__description p {
+.banner__item-description p {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
@@ -138,7 +150,7 @@ img {
   margin: 0;
 }
 
-.banner__description {
+.banner__item-description {
   text-align: center;
 }
 
@@ -346,13 +358,24 @@ img {
   color: var(--basic-black);
 }
 
-.breadcrumbs__sort-current a {
-  color: var(--seagull-block);
-}
-
-.breadcrumbs__sort-notcurrent a {
+.breadcrumbs__sort-item a {
   color: var(--basic-black-rgba);
   text-decoration: underline var(--seagull-block) dotted;
+}
+
+.breadcrumbs__sort-item a:hover {
+  color: var(--seagull-block);
+  text-decoration: underline var(--seagull-block) dotted;
+}
+
+.breadcrumbs__sort-item a:active {
+  color: var(--basic-black);
+  text-decoration: none;
+}
+
+.breadcrumbs__sort-item a:focus {
+  color: var(--seagull-block);
+  text-decoration: none;
 }
 
 /* show hotels */
@@ -364,9 +387,14 @@ img {
   list-style: none;
 }
 
-.show__list h3 {
-  line-height: 26px;
+.show__item-item h3 {
   margin: 0;
+}
+
+.show__item-item-title {
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
 }
 
 .show__item-text {
@@ -381,6 +409,7 @@ img {
   font-weight: 400;
   color: var(--dim-gray);
   background-color: var(--white-smoke);
+  margin: 0;
 }
 
 .show__item-detail,
@@ -395,6 +424,32 @@ img {
 
 .show__item-reservation {
   background-color: var(--roman-coffee);
+}
+
+.show__item-item-title:hover {
+  color: var(--seagull-block);
+}
+
+.show__item-item-title:active {
+  color: var(--basic-black-rgba);
+}
+
+.show__item-detail:hover {
+  background-color: var(--seagull-block-hover);
+}
+
+.show__item-detail:active {
+  color: var(--basic-white-rgba);
+  background-color: var(--seagull-block-active);
+}
+
+.show__item-reservation:hover {
+  background-color: var(--roman-coffee-hover);
+}
+
+.show__item-reservation:active {
+  color: var(--basic-white-rgba);
+  background-color: var(--roman-coffee-active);
 }
 
 /* -------------------------------footer------------------------------- */
