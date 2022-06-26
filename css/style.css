@@ -19,14 +19,14 @@
 /* -------------------------------variables------------------------------- */
 
 :root {
+  --white: #ffffff;
   --white-smoke: #f2f2f2;
-  --basic-white: #ffffff;
-  --basic-white-rgba: rgba(255, 255, 255, 0.3);
+  --white-rgba: rgba(255, 255, 255, 0.3);
+  --black: #000000;
+  --black-rgba: rgba(0, 0, 0, 0.3);
   --whisper: #eeeeee;
   --whisper-hover: #ebebeb;
   --whisper-focus: #e5e5e5;
-  --basic-black: #000000;
-  --basic-black-rgba: rgba(0, 0, 0, 0.3);
   --night-rider: #333333;
   --roman-coffee: #766357;
   --roman-coffee-hover: #604e43;
@@ -36,7 +36,7 @@
   --seagull-block: #81b3d2;
   --seagull-block-hover: #669ec0;
   --seagull-block-active: #5496bd;
-  --light-green: #c5dfb9;
+  --green-light: #c5dfb9;
 }
 
 /* -------------------------------global------------------------------- */
