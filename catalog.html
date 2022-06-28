@@ -81,26 +81,25 @@
         </fieldset>
         <fieldset>
           <legend>Стоимость в сутки, <span>₽</span>:</legend>
-          <ul class="filter__list-cost">
-            <li class="filter__item-cost">
-              <label>от<input class="filter__range-count" type="number" placeholder="0" />
-              </label>
+          <ul class="filter__list-cost-input">
+            <li class="filter__item-field">
+              <label for="filter__input-min-min">от</label>
+              <input type="number" class="filter__input-min" value="0" id="filter__input-min-min" />
             </li>
-            <li class="filter__item-cost">
-              <label>до<input class="filter__range-count" type="number" placeholder="3000" />
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="range" name="cost-min" min="0" max="3000" value="0" />
-              </label>
-              <label>
-                <input type="range" name="cost-min" min="0" max="3000" value="0" />
-              </label>
+            <li class="filter__item-separator"></li>
+            <li class="filter__item-field">
+              <label for="filter__input-max-maz">до</label>
+              <input type="number" class="filter__input-max" value="3000" id="filter__input-max-max">
             </li>
           </ul>
+          <ul class="filter__list-slider">
+            <li class="filter__item-progress"></li>
+          </ul>
+          <ul class="filter__list-range-input">
+            <input type="range" class="filter__item-range-min" min="0" max="10000" value="0">
+            <input type="range" class="filter__item-range-max" min="0" max="10000" value="3000">
+          </ul>
         </fieldset>
-        <!-- there should be range bar -->
         <button class="filter__button" type="submit">показать</button>
       </form>
     </section>
