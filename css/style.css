@@ -356,7 +356,7 @@ img {
   left: 70px;
 }
 
-.filter__item-field:nth-child(3) label {
+.filter__item-field:last-child label {
   position: absolute;
   right: 110px;
 }
