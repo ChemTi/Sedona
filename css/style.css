@@ -31,6 +31,7 @@
   --roman-coffee: #766357;
   --roman-coffee-hover: #604e43;
   --roman-coffee-active: #503e33;
+  --gray: #ababab;
   --dim-gray: #666666;
   --seagull: #81b3d3;
   --seagull-block: #81b3d2;
@@ -296,34 +297,138 @@ img {
   color: var(--white);
 }
 
-.filter__list-infrastructure,
-.filter__list-cost {
+.filter__form fieldset:nth-child(3) {
+  width: 317px;
+  background: transparent;
+}
+
+.filter__list-infrastructure {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.filter__list-cost-input,
+.filter__list-slider,
+.filter__list-range-input {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.filter__list-cost-input {
+  width: 100%;
+  margin: 30px 0 35px;
+  border: 2px solid var(--white);
+  display: flex;
+  position: relative;
+}
+
+.filter__item-field {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.filter__item-field input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--white);
+  background: transparent;
+  margin-left: 12px;
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.filter__item-field input[type="number"]::-webkit-outer-spin-button,
+.filter__item-field input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.filter__item-field:nth-child(1) label {
+  position: absolute;
+  left: 70px;
+}
+
+.filter__item-field:last-child label {
+  position: absolute;
+  right: 110px;
+}
+
+.filter__item-separator {
+  width: 2px;
+  height: 22px;
+  background: var(--white);
+  position: absolute;
+  left: 180px;
+  bottom: 8px;
 }
 
 .filter__item-infrastructure label:hover {
   color: var(--white);
 }
 
-/* .filter__form label {
-  pointer-events: none;
-} */
-
 .filter__form label,
-.filter__range-count::placeholder,
-.filter__range-count::placeholder,
-.filter__range-count[type="text"],
 .filter__button {
   font-size: 14px;
   font-weight: 400;
   color: var(--white);
 }
 
-.filter__range-count {
-  border: none;
-  background-color: transparent;
+.filter__list-slider {
+  height: 2px;
+  border-radius: 5px;
+  background: var(--white-rgba);
+  position: relative;
+}
+
+.filter__item-progress {
+  height: 2px;
+  border-radius: 5px;
+  background: var(--white);
+  position: absolute;
+  left: 0%;
+  right: 15%;
+}
+
+.filter__list-range-input {
+  position: relative;
+}
+
+.filter__list-range-input input {
+  position: absolute;
+  top: -5px;
+  height: 5px;
+  width: 100%;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+}
+
+.filter__list-range-input input[type="range"]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 8px solid var(--white);
+  background: var(--gray);
+  pointer-events: auto;
+  box-shadow: 0px 1px var(--gray);
+  -webkit-appearance: none;
+}
+
+.filter__list-range-input input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  pointer-events: auto;
+  -moz-appearance: none;
 }
 
 .filter__button {
