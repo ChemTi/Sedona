@@ -32,6 +32,7 @@
   --roman-coffee-hover: #604e43;
   --roman-coffee-active: #503e33;
   --gray: #ababab;
+  --gray-bar: rgba(0, 1, 1, 0.2);
   --dim-gray: #666666;
   --seagull: #81b3d3;
   --seagull-block: #81b3d2;
@@ -53,6 +54,11 @@
   color: var(--black);
   text-transform: uppercase;
   background-color: var(--white-smoke);
+  box-shadow: 0px 5px 15px var(--gray-bar);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -77,22 +83,44 @@ img {
   overflow: hidden;
 }
 
+
+/* -------------------------------grid------------------------------- */
+
+.page {
+  height: 100%;
+}
+
+/* -------------------------------container------------------------------- */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* -------------------------------header------------------------------- */
 
 /* navigation bar */
 
-.navigation {
-  font-size: 14px;
-  line-height: 26px;
-  background-color: transparent;
-}
-
-.navigation__wrapper {
+.main-header__background {
   background-color: var(--white);
 }
 
+.navigation {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+/* .navigation::before {
+  content: "";
+  background: url("/img/logo-index.png") no-repeat;
+  width: 138px;
+  height: 70px;
+  display: block;
+} */
+
 .navigation__list {
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -118,7 +146,7 @@ img {
 }
 /* -------------------------------main------------------------------- */
 
-.container {
+.main-background {
   background-color: var(--white);
 }
 
