@@ -110,14 +110,6 @@ img {
   line-height: 26px;
 }
 
-/* .navigation::before {
-  content: "";
-  background: url("/img/logo-index.png") no-repeat;
-  width: 138px;
-  height: 70px;
-  display: block;
-} */
-
 .navigation__list {
   margin: 0;
   padding: 0;
@@ -155,7 +147,7 @@ img {
 .banner__item-img {
   width: 1200px;
   height: 509px;
-  background: var(--seagull) url("/img/welcomePic.jpg") no-repeat;
+  background: var(--seagull) url("../img/welcomePic.jpg") no-repeat;
 }
 
 .banner__list {
