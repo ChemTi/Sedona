@@ -43,6 +43,10 @@
 
 /* -------------------------------global------------------------------- */
 
+* {
+  box-sizing: border-box;
+}
+
 .page {
   height: 100%;
 }
@@ -195,8 +199,18 @@ img {
 
 /* about Sedona */
 
+.reasons__description {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .reasons__description-background {
   background-color: var(--seagull-block);
+}
+
+.reasons__description-text {
+  width: 400px;
+  text-align: center;
 }
 
 .reasons__description-text h4,
@@ -210,6 +224,13 @@ img {
 .reasons__description-text p {
   font-size: 14px;
   font-weight: 400;
+}
+
+.reasons__description-img img {
+  width: 800px;
+  height: 256px;
+  display: block;
+  background-color: var(--seagull);
 }
 
 /* services */
@@ -232,6 +253,23 @@ img {
 }
 
 /* bridge of Devil */
+
+.reasons__attraction {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.reasons__attraction-img img {
+  display: block;
+  height: 256px;
+  display: block;
+  background-color: var(--seagull);
+}
+
+.reasons__attraction-text {
+  width: 400px;
+  text-align: center;
+}
 
 .reasons__attraction-text h4,
 .reasons__attraction-text span,
