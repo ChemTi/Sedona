@@ -161,10 +161,10 @@ img {
   content: "";
   width: 460px;
   height: 360px;
-  background: url("/img/welcomeSedonaGorgeous.png") no-repeat;
+  background: url("../img/welcomeSedonaGorgeous.png") no-repeat;
   display: block;
   position: absolute;
-  top: 65px;
+  top: 75px;
   left: 380px;
 }
 
@@ -370,25 +370,39 @@ img {
 
 /* search */
 
-.search-title,
-.search-subtitle {
+.search__wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.search__title,
+.search__subtitle {
   margin: 0;
 }
 
-.search-title {
+.search__title {
   font-size: 30px;
   line-height: 24px;
+  margin: 58px 0 25px 0;
 }
 
-.search-subtitle {
+.search__subtitle {
   font-size: 14px;
   font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.search__button {
+  width: 568px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--roman-coffee);
 }
 
 .search__button-search {
-  padding: 30px 125px;
   color: var(--white);
-  background-color: var(--roman-coffee);
+  padding: 30px 117px;
 }
 
 .search__button-search:hover {
@@ -400,9 +414,9 @@ img {
   background-color: var(--roman-coffee-active);
 }
 
-.search-title,
-.search-subtitle,
-.search__button-search {
+.search__title,
+.search__subtitle,
+.search__button {
   text-align: center;
 }
 
