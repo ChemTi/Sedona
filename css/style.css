@@ -370,17 +370,17 @@ img {
 
 /* search */
 
-.search h3,
-.search p {
+.search-title,
+.search-subtitle {
   margin: 0;
 }
 
-.search h3 {
+.search-title {
   font-size: 30px;
   line-height: 24px;
 }
 
-.search p {
+.search-subtitle {
   font-size: 14px;
   font-weight: 400;
 }
@@ -400,9 +400,9 @@ img {
   background-color: var(--roman-coffee-active);
 }
 
-.search h3,
-.search p,
-.search a {
+.search-title,
+.search-subtitle,
+.search__button-search {
   text-align: center;
 }
 
