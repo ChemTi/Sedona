@@ -66,7 +66,7 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 a {
@@ -161,10 +161,10 @@ img {
   content: "";
   width: 460px;
   height: 360px;
-  background: url("/img/welcomeSedonaGorgeous.png") no-repeat;
+  background: url("../img/welcomeSedonaGorgeous.png") no-repeat;
   display: block;
   position: absolute;
-  top: 65px;
+  top: 75px;
   left: 380px;
 }
 
@@ -222,19 +222,19 @@ img {
   padding: 0 10px;
 }
 
-.reasons__description-text-title,
-.reasons__description-text-span,
-.reasons__description-text-subtitle {
+.reasons__description-title,
+.reasons__description-span,
+.reasons__description-subtitle {
   color: var(--white);
   margin: 0;
 }
 
-.reasons__description-text-span {
+.reasons__description-span {
   margin: 25px 0 23px 0;
 }
 
-.reasons__description-text-span,
-.reasons__description-text-subtitle {
+.reasons__description-span,
+.reasons__description-subtitle {
   font-size: 14px;
   font-weight: 400;
 }
@@ -263,16 +263,16 @@ img {
   padding: 0 10px;
 }
 
-.reasons__services-item-title,
-.reasons__services-item-subtitle {
+.reasons__services-title,
+.reasons__services-subtitle {
   margin: 0;
 }
 
-.reasons__services-item-title {
+.reasons__services-title {
   margin: 160px 0 25px 0;
 }
 
-.reasons__services-item-subtitle {
+.reasons__services-subtitle {
   font-size: 14px;
   font-weight: 400;
   color: var(--night-rider);
@@ -302,20 +302,20 @@ img {
   padding: 0 10px;
 }
 
-.reasons__attraction-text-title,
-.reasons__attraction-text-span,
-.reasons__attraction-text-subtitle {
+.reasons__attraction-title,
+.reasons__attraction-span,
+.reasons__attraction-subtitle {
   color: var(--white);
   margin: 0;
 }
 
-.reasons__attraction-text-span,
-.reasons__attraction-text-subtitle {
+.reasons__attraction-span,
+.reasons__attraction-subtitle {
   font-size: 14px;
   font-weight: 400;
 }
 
-.reasons__attraction-text-span {
+.reasons__attraction-span {
   padding: 25px 0 23px 0;
 }
 
@@ -370,25 +370,39 @@ img {
 
 /* search */
 
-.search h3,
-.search p {
+.search__wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.search__title,
+.search__subtitle {
   margin: 0;
 }
 
-.search h3 {
+.search__title {
   font-size: 30px;
   line-height: 24px;
+  margin: 58px 0 25px 0;
 }
 
-.search p {
+.search__subtitle {
   font-size: 14px;
   font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.search__button {
+  width: 568px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--roman-coffee);
 }
 
 .search__button-search {
-  padding: 30px 125px;
   color: var(--white);
-  background-color: var(--roman-coffee);
+  padding: 30px 117px;
 }
 
 .search__button-search:hover {
@@ -400,9 +414,9 @@ img {
   background-color: var(--roman-coffee-active);
 }
 
-.search h3,
-.search p,
-.search a {
+.search__title,
+.search__subtitle,
+.search__button {
   text-align: center;
 }
 
