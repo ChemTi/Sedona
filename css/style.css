@@ -52,7 +52,7 @@
 }
 
 .page-body {
-  min-width: 960px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -62,12 +62,11 @@
   color: var(--black);
   text-transform: uppercase;
   background-color: var(--white-smoke);
-
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  padding: 0 40px;
+  padding: 0 10px;
 }
 
 a {
@@ -150,50 +149,56 @@ img {
 
 /* banner */
 
-.banner__item-img {
+.banner-background {
   width: 1200px;
   height: 509px;
-  background: var(--seagull) url("../img/welcomePic.jpg") no-repeat;
+  background: var(--seagull);
+  position: relative;
+  margin-bottom: 42px;
 }
 
-.banner__item-img::before {
+.banner-background::before {
   content: "";
-  width: 1200px;
-  height: 452px;
-  background: url("../img/welcomeSedonaGorgeous.png") no-repeat 372px 78px;
+  width: 460px;
+  height: 360px;
+  background: url("/img/welcomeSedonaGorgeous.png") no-repeat;
   display: block;
+  position: absolute;
+  top: 65px;
+  left: 380px;
 }
 
-.banner__item-img::after {
+.banner-background::after {
   content: "";
   width: 1200px;
   height: 57px;
   background: url("../img/welcomeShape-index.png") no-repeat;
   display: block;
+  position: absolute;
+  top: 452px;
 }
 
-.banner__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.banner__item-description h3 {
+.banner__title {
   font-size: inherit;
   font-weight: inherit;
   line-height: 26px;
   margin: 0;
+  margin-bottom: 42px;
+  padding: 0 10px;
 }
 
-.banner__item-description p {
+.banner__subtitle {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
   color: var(--night-rider);
   margin: 0;
+  margin-bottom: 51px;
+  padding: 0 10px;
 }
 
-.banner__item-description {
+.banner__title,
+.banner__subtitle {
   text-align: center;
 }
 
@@ -211,25 +216,33 @@ img {
 .reasons__description-text {
   width: 400px;
   text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 0 10px;
 }
 
-.reasons__description-text h4,
-.reasons__description-text span,
-.reasons__description-text p {
+.reasons__description-text-title,
+.reasons__description-text-span,
+.reasons__description-text-subtitle {
   color: var(--white);
   margin: 0;
 }
 
-.reasons__description-text span,
-.reasons__description-text p {
+.reasons__description-text-span {
+  margin: 25px 0 23px 0;
+}
+
+.reasons__description-text-span,
+.reasons__description-text-subtitle {
   font-size: 14px;
   font-weight: 400;
 }
 
-.reasons__description-img img {
+.reasons__description-img {
+  display: block;
   width: 800px;
   height: 256px;
-  display: block;
   background-color: var(--seagull);
 }
 
@@ -239,17 +252,31 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,400px);
+  text-align: center;
 }
 
-.reasons__services-item h4,
-.reasons__services-item p {
+.reasons__services-item {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0 10px;
+}
+
+.reasons__services-item-title,
+.reasons__services-item-subtitle {
   margin: 0;
 }
 
-.reasons__services-item p {
+.reasons__services-item-title {
+  margin: 160px 0 25px 0;
+}
+
+.reasons__services-item-subtitle {
   font-size: 14px;
   font-weight: 400;
   color: var(--night-rider);
+  margin-bottom: 82px;
 }
 
 /* bridge of Devil */
@@ -259,29 +286,37 @@ img {
   flex-flow: row wrap;
 }
 
-.reasons__attraction-img img {
+.reasons__attraction-img {
   display: block;
+  width: 800px;
   height: 256px;
-  display: block;
   background-color: var(--seagull);
 }
 
 .reasons__attraction-text {
   width: 400px;
   text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 0 10px;
 }
 
-.reasons__attraction-text h4,
-.reasons__attraction-text span,
-.reasons__attraction-text p {
+.reasons__attraction-text-title,
+.reasons__attraction-text-span,
+.reasons__attraction-text-subtitle {
   color: var(--white);
   margin: 0;
 }
 
-.reasons__attraction-text span,
-.reasons__attraction-text p {
+.reasons__attraction-text-span,
+.reasons__attraction-text-subtitle {
   font-size: 14px;
   font-weight: 400;
+}
+
+.reasons__attraction-text-span {
+  padding: 25px 0 23px 0;
 }
 
 .reasons__attraction-background {
@@ -298,18 +333,39 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,400px);
+  text-align: center;
 }
 
-.reasons__benefits-list h4,
-.reasons__benefits-list p {
+.reasons__benefits-item {
+  display: flex;
+  flex-flow: column wrap;
+  padding:  0 10px;
+}
+
+.reasons__benefits-title,
+.reasons__benefits-subtitle {
   margin: 0;
 }
 
-.reasons__benefits-item span,
-.reasons__benefits-item p {
+.reasons__benefits-span,
+.reasons__benefits-subtitle {
   font-size: 14px;
   font-weight: 400;
   color: var(--night-rider);
+}
+
+.reasons__benefits-title {
+  margin: 47px 0 25px 0;
+}
+
+.reasons__benefits-span {
+  margin-bottom: 23px
+}
+
+.reasons__benefits-subtitle {
+  margin-bottom: 54px;
 }
 
 /* search */
@@ -501,10 +557,11 @@ img {
 }
 
 .filter__list-range-input input[type="range"]::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
-  background: var(--white);
+  border: 8px solid var(--white);
+  background: var(--gray);
   pointer-events: auto;
   -moz-appearance: none;
 }
