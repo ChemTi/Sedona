@@ -708,7 +708,18 @@ img {
 
 /* -------------------------------footer------------------------------- */
 
-.footer__contacts a {
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3,400px);
+  place-items: center;
+}
+
+.footer__contacts-address {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.footer__contacts-link {
   line-height: 26px;
   color: var(--black);
   text-decoration: none;
@@ -718,9 +729,10 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
-.footer__copyright p {
+.footer__copyright-subtitle {
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
