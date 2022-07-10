@@ -22,6 +22,7 @@
   --white: #ffffff;
   --white-smoke: #f2f2f2;
   --white-rgba: rgba(255, 255, 255, 0.3);
+  --white-rgba-footer: rgba(255, 255, 255, 0.9);
   --black: #000000;
   --black-rgba: rgba(0, 0, 0, 0.3);
   --whisper: #eeeeee;
@@ -64,9 +65,20 @@
   background-color: var(--white-smoke);
   min-height: 100%;
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: min-content 1fr;
   align-content: start;
   padding: 0 20px;
+}
+
+.page-body-catalog {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.page-body-catalog .footer {
+  grid-column: 1/-1;
+  grid-row: 3/-1;
 }
 
 a {
@@ -76,6 +88,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .visually-hidden {
@@ -102,6 +115,19 @@ img {
   box-shadow: 0px 5px 15px var(--gray-bar);
 }
 
+.main {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+
+.footer {
+  min-height: 120px;
+  grid-column: 1/-1;
+  grid-row: 2/-2;
+  z-index: 1;
+  margin-top: auto;
+}
+
 /* -------------------------------header------------------------------- */
 
 /* navigation bar */
@@ -121,24 +147,24 @@ img {
   list-style: none;
 }
 
-.navigation__item a {
+.navigation__link {
   color: var(--black);
 }
 
-.navigation__item a:hover {
+.navigation__link:hover {
   color: var(--seagull-block);
 }
 
-.navigation__item a:focus {
+.navigation__link:focus {
   color: var(--black);
   opacity: 0.3;
 }
 
-.navigation__item a:active {
+.navigation__link:active {
   color: var(--roman-coffee);
 }
 
-.navigation__item-current a {
+.navigation__item-current .navigation__link {
   color: var(--roman-coffee);
 }
 /* -------------------------------main------------------------------- */
@@ -430,13 +456,21 @@ img {
 
 /* filter */
 
-.filter__background {
-  background: var(--seagull-block) url("/img/background_filter-catalog.png") 0 0
-    no-repeat;
+.filter-background {
+  background: var(--seagull-block) url("/img/background_filter-catalog.png") 0 0 no-repeat;
+  min-width: 1200px;
+}
+
+.filter__form {
+  display: grid;
+  grid-template-columns: repeat(3,400px);
+  width: 1200px;
+  min-height: 217px;
 }
 
 .filter__form fieldset {
   border: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -445,15 +479,17 @@ img {
   color: var(--white);
 }
 
-.filter__form fieldset:nth-child(3) {
-  width: 317px;
-  background: transparent;
-}
-
 .filter__list-infrastructure {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.filter__cost-wrapper {
+  width: 317px;
+  margin-bottom: 33px;
 }
 
 .filter__list-cost-input,
@@ -467,7 +503,7 @@ img {
 
 .filter__list-cost-input {
   width: 100%;
-  margin: 30px 0 35px;
+  margin: 30px 0 20px 0;
   border: 2px solid var(--white);
   display: flex;
   position: relative;
@@ -480,18 +516,26 @@ img {
   align-items: center;
 }
 
-.filter__item-field input {
+.filter__item-field .filter__cost-input-min,
+.filter__item-field .filter__cost-input-max {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: var(--white);
   background: transparent;
-  margin-left: 12px;
   border: none;
   border-radius: 2px;
   text-align: center;
   outline: none;
   -moz-appearance: textfield;
+}
+
+.filter__cost-input-min {
+  margin-left: 12px;
+}
+
+.filter__cost-input-max {
+  margin-left: -35px;
 }
 
 .filter__item-field input[type="number"]::-webkit-outer-spin-button,
@@ -501,7 +545,7 @@ img {
 
 .filter__item-field:nth-child(1) label {
   position: absolute;
-  left: 70px;
+  left: 65px;
 }
 
 .filter__item-field:last-child label {
@@ -514,7 +558,7 @@ img {
   height: 22px;
   background: var(--white);
   position: absolute;
-  left: 180px;
+  left: 150px;
   bottom: 8px;
 }
 
@@ -530,6 +574,7 @@ img {
 }
 
 .filter__list-slider {
+  width: 317px;
   height: 2px;
   border-radius: 5px;
   background: var(--white-rgba);
@@ -549,7 +594,8 @@ img {
   position: relative;
 }
 
-.filter__list-range-input input {
+.filter__list-range-input .filter__range-min,
+.filter__list-range-input .filter__range-max {
   position: absolute;
   top: -5px;
   height: 5px;
@@ -557,6 +603,10 @@ img {
   background: none;
   pointer-events: none;
   -webkit-appearance: none;
+}
+
+.filter__list-range-input .filter__range-max {
+  left: 170px;
 }
 
 .filter__list-range-input input[type="range"]::-webkit-slider-thumb {
@@ -585,6 +635,8 @@ img {
   border: 2px solid var(--white);
   background-color: transparent;
   cursor: pointer;
+  margin-left: 75px;
+  padding: 7px 36px 8px 35px;
 }
 
 .filter__button:hover {
@@ -596,16 +648,30 @@ img {
 
 .breadcrumbs__sort-list {
   list-style: none;
-  margin: 0;
+  margin: 29px 0 31px 73px;
   padding: 0;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.breadcrumbs__sort-list li:nth-child(1) {
+.breadcrumbs__sort-item {
+  margin-right: 32px;
+}
+
+.breadcrumbs__sort-item .breadcrumbs__found-span,
+.breadcrumbs__sort-item .breadcrumbs__count {
+  font-weight: 700px;
   line-height: 26px;
+  color: var(--black);
+}
+
+.breadcrumbs__sort-item span,
+.breadcrumbs__sort-item a {
+  vertical-align: text-top;
 }
 
 .breadcrumbs__sort-item a,
-.breadcrumbs__sort-item span {
+.breadcrumbs__sort-span {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -641,7 +707,16 @@ img {
   list-style: none;
 }
 
-.show__item-item h3 {
+.show__list {
+  margin: 0 72px 0 73px;
+}
+
+.show__list-list {
+  display: grid;
+  grid-template-columns: 135px 1fr auto;
+}
+
+.show__item-title {
   margin: 0;
 }
 
@@ -651,7 +726,14 @@ img {
   color: var(--black);
 }
 
-.show__item-text {
+.show__item-item {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.show__item-text,
+.show__item-text-link {
   font-size: 14px;
   font-weight: 400;
   color: var(--night-rider);
@@ -670,6 +752,7 @@ img {
 .show__item-reservation {
   font-size: 14px;
   color: var(--white);
+  padding: 3px 17px;
 }
 
 .show__item-detail {
@@ -709,9 +792,17 @@ img {
 /* -------------------------------footer------------------------------- */
 
 .footer__wrapper {
+  min-height: 120px;
   display: grid;
   grid-template-columns: repeat(3,400px);
   place-items: center;
+  background-color: var(--white-rgba-footer);
+}
+
+.footer__contacts,
+.footer__social,
+.footer__copyright {
+  padding: 0 10px;
 }
 
 .footer__contacts-address {
@@ -737,10 +828,6 @@ img {
   font-weight: 400;
   line-height: 26px;
   margin: 0;
-}
-
-.footer__wrapper {
-  background-color: var(--white);
 }
 
 /* -------------------------------modal search hotel------------------------------- */
