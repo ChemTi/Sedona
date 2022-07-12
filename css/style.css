@@ -63,22 +63,8 @@
   color: var(--black);
   text-transform: uppercase;
   background-color: var(--white-smoke);
+  display: grid;
   min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  align-content: start;
-  padding: 0 20px;
-}
-
-.page-body-catalog {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
-}
-
-.page-body-catalog .footer {
-  grid-column: 1/-1;
-  grid-row: 3/-1;
 }
 
 a {
@@ -104,7 +90,19 @@ img {
   overflow: hidden;
 }
 
-/* -------------------------------container------------------------------- */
+/* -------------------------------container & grid------------------------------- */
+
+.page-body-catalog {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100%;
+}
+
+.page-body-catalog .footer {
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+}
 
 .container {
   min-width: 1200px;
@@ -113,6 +111,13 @@ img {
 
 .container-shadow {
   box-shadow: 0px 5px 15px var(--gray-bar);
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  align-content: start;
+  min-height: 100%;
 }
 
 .main {
@@ -486,26 +491,42 @@ img {
 /* filter */
 
 .filter-background {
-  background: var(--seagull-block) url("/img/background_filter-catalog.png") 0 0 no-repeat;
+  background: var(--seagull-block) url("../img/background_filter-catalog.png") 0 0 no-repeat;
   min-width: 1200px;
 }
 
 .filter__form {
   display: grid;
-  grid-template-columns: repeat(3,400px);
+  grid-template-columns: 250px 250px 1fr;
   width: 1200px;
   min-height: 217px;
 }
 
-.filter__form fieldset {
+.filter__fieldset-infrastructure,
+.filter__fieldset-housing,
+.filter__fieldset-cost {
   border: none;
   margin: 0;
   padding: 0;
+  margin-top: 26px;
+}
+
+.filter__fieldset-infrastructure {
+  margin-left: 71px;
+}
+
+.filter__fieldset-housing {
+  margin-left: 75px;
+}
+
+.filter__fieldset-cost {
+  margin-left: 309px;
 }
 
 .filter legend {
   font-size: 16px;
   color: var(--white);
+  margin-bottom: 22px;
 }
 
 .filter__list-infrastructure {
@@ -514,6 +535,24 @@ img {
   padding: 0;
   display: flex;
   flex-flow: column wrap;
+}
+
+.filter__item-infrastructure-pool,
+.filter__item-infrastructure-parking {
+    margin: 0 0 22px 27px;
+}
+
+.filter__item-infrastructure-wifi {
+  margin-left: 27px;
+}
+
+.filter__item-infrastructure-hotels,
+.filter__item-infrastructure-motels {
+  margin: 0 0 22px 30px;
+}
+
+.filter__item-infrastructure-appartments {
+  margin-left: 30px;
 }
 
 .filter__cost-wrapper {
@@ -532,7 +571,7 @@ img {
 
 .filter__list-cost-input {
   width: 100%;
-  margin: 30px 0 20px 0;
+  margin: -12px 2px 18px 0;
   border: 2px solid var(--white);
   display: flex;
   position: relative;
@@ -540,7 +579,7 @@ img {
 
 .filter__item-field {
   width: 100%;
-  height: 36px;
+  height: 34px;
   display: flex;
   align-items: center;
 }
@@ -560,11 +599,11 @@ img {
 }
 
 .filter__cost-input-min {
-  margin-left: 12px;
+  margin-left: 9px;
 }
 
 .filter__cost-input-max {
-  margin-left: -35px;
+  margin-left: -4px;
 }
 
 .filter__item-field input[type="number"]::-webkit-outer-spin-button,
@@ -574,12 +613,13 @@ img {
 
 .filter__item-field:nth-child(1) label {
   position: absolute;
-  left: 65px;
+  top: 7px;
+  left: 66px;
 }
 
 .filter__item-field:last-child label {
   position: absolute;
-  right: 110px;
+  right: 83px;
 }
 
 .filter__item-separator {
@@ -587,7 +627,7 @@ img {
   height: 22px;
   background: var(--white);
   position: absolute;
-  left: 150px;
+  left: 156px;
   bottom: 8px;
 }
 
@@ -635,7 +675,7 @@ img {
 }
 
 .filter__list-range-input .filter__range-max {
-  left: 170px;
+  left: 165px;
 }
 
 .filter__list-range-input input[type="range"]::-webkit-slider-thumb {
@@ -664,7 +704,7 @@ img {
   border: 2px solid var(--white);
   background-color: transparent;
   cursor: pointer;
-  margin-left: 75px;
+  margin-left: 84px;
   padding: 7px 36px 8px 35px;
 }
 
@@ -677,15 +717,15 @@ img {
 
 .breadcrumbs__sort-list {
   list-style: none;
-  margin: 29px 0 31px 73px;
+  margin: 29px 0 62px 73px;
   padding: 0;
   display: flex;
   flex-flow: row wrap;
 }
 
-.breadcrumbs__sort-item {
-  margin-right: 32px;
-}
+/* .breadcrumbs__sort-item {
+  margin-right: 46px;
+} */
 
 .breadcrumbs__sort-item .breadcrumbs__found-span,
 .breadcrumbs__sort-item .breadcrumbs__count {
@@ -696,7 +736,7 @@ img {
 
 .breadcrumbs__sort-item span,
 .breadcrumbs__sort-item a {
-  vertical-align: text-top;
+  vertical-align: bottom;
 }
 
 .breadcrumbs__sort-item a,
@@ -710,6 +750,22 @@ img {
 .breadcrumbs__sort-item a {
   color: var(--black-rgba);
   text-decoration: underline var(--seagull-block) dotted;
+}
+
+.breadcrumbs__found {
+  margin-right: 46px;
+}
+
+.breadcrumbs__sorting {
+  margin-right: 40px;
+}
+
+.breadcrumbs__byprice {
+  margin-right: 32px;
+}
+
+.breadcrumbs__bytype {
+  margin-right: 33px;
 }
 
 .breadcrumbs__sort-item a:hover {
@@ -745,8 +801,17 @@ img {
   grid-template-columns: 135px 1fr auto;
 }
 
+.show__item {
+  margin-bottom: 61px;
+}
+
+.show__item:last-child {
+  margin-bottom: 54px;
+}
+
 .show__item-title {
   margin: 0;
+  margin-top: -6px;
 }
 
 .show__item-item-title {
@@ -755,10 +820,8 @@ img {
   color: var(--black);
 }
 
-.show__item-item {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
+.show__description {
+  margin-left: 30px;
 }
 
 .show__item-text,
@@ -767,6 +830,19 @@ img {
   font-weight: 400;
   color: var(--night-rider);
   margin: 0;
+  margin-bottom: 7px;
+}
+
+.show__item-text-span-hotel {
+  margin-left: 34px;
+}
+
+.show__item-text-span-motel {
+  margin-left: 59px;
+}
+
+.show__item-text-span-appartments {
+  margin-left: 17px;
 }
 
 .show__item-rating {
@@ -835,6 +911,7 @@ img {
 }
 
 .footer__contacts-address {
+  font-style: normal;
   min-height: 120px;
   margin-bottom: -40px;
 }
@@ -848,11 +925,11 @@ img {
 
 .footer__contacts-link:first-child {
   margin-bottom: 10px;
-  margin-left: 85px;
+  margin-left: 87px;
 }
 
 .footer__contacts-link:last-child {
-  margin-left: 70px;
+  margin-left: 71px;
 }
 
 .footer__social-list {
@@ -866,7 +943,7 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
-  margin: 0;
+  margin: 0 196px 7px 0;
 }
 
 /* -------------------------------modal search hotel------------------------------- */
