@@ -139,16 +139,34 @@ img {
 .navigation {
   font-size: 14px;
   line-height: 26px;
+  position: relative;
 }
 
 .navigation__list {
+  min-height: 56px;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.navigation__item-info {
+  margin: 0 134px 0 72px;
+}
+
+.navigation__item-foto {
+  margin-right: 418px;
+}
+
+.navigation__item-map {
+  margin-right: 147px;
 }
 
 .navigation__link {
   color: var(--black);
+  display: block;
 }
 
 .navigation__link:hover {
@@ -167,6 +185,15 @@ img {
 .navigation__item-current .navigation__link {
   color: var(--roman-coffee);
 }
+
+.navigation__logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 531px;
+  z-index: 1;
+}
+
 /* -------------------------------main------------------------------- */
 
 .main-background {
@@ -190,8 +217,8 @@ img {
   background: url("../img/welcomeSedonaGorgeous.png") no-repeat;
   display: block;
   position: absolute;
-  top: 75px;
-  left: 380px;
+  top: 76px;
+  left: 372px;
 }
 
 .banner-background::after {
@@ -209,7 +236,7 @@ img {
   font-weight: inherit;
   line-height: 26px;
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 43px;
   padding: 0 10px;
 }
 
@@ -233,6 +260,7 @@ img {
 .reasons__description {
   display: flex;
   flex-flow: row wrap;
+  min-height: 256px;
 }
 
 .reasons__description-background {
@@ -310,6 +338,7 @@ img {
 .reasons__attraction {
   display: flex;
   flex-flow: row wrap;
+  min-height: 256px;
 }
 
 .reasons__attraction-img {
@@ -383,7 +412,7 @@ img {
 }
 
 .reasons__benefits-title {
-  margin: 47px 0 25px 0;
+  margin: 47px 0 28px 0;
 }
 
 .reasons__benefits-span {
@@ -410,13 +439,13 @@ img {
 .search__title {
   font-size: 30px;
   line-height: 24px;
-  margin: 58px 0 25px 0;
+  margin: 58px 12px 35px 0;
 }
 
 .search__subtitle {
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 
 .search__button {
@@ -428,7 +457,7 @@ img {
 
 .search__button-search {
   color: var(--white);
-  padding: 30px 117px;
+  padding: 32px 139px;
 }
 
 .search__button-search:hover {
@@ -806,14 +835,24 @@ img {
 }
 
 .footer__contacts-address {
-  display: flex;
-  flex-flow: column wrap;
+  min-height: 120px;
+  margin-bottom: -40px;
 }
 
 .footer__contacts-link {
+  display: block;
   line-height: 26px;
   color: var(--black);
   text-decoration: none;
+}
+
+.footer__contacts-link:first-child {
+  margin-bottom: 10px;
+  margin-left: 85px;
+}
+
+.footer__contacts-link:last-child {
+  margin-left: 70px;
 }
 
 .footer__social-list {
