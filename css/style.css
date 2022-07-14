@@ -314,6 +314,7 @@ img {
   display: flex;
   flex-flow: column wrap;
   padding: 0 10px;
+  position: relative;
 }
 
 .reasons__services-title,
@@ -323,6 +324,36 @@ img {
 
 .reasons__services-title {
   margin: 160px 0 25px 0;
+}
+
+.reasons__services-house-icon::before {
+  content: "";
+  position: absolute;
+  top: 61px;
+  left: 161px;
+  width: 75px;
+  height: 72px;
+  background: url("../img/housing-index.svg") no-repeat 0 0;
+}
+
+.reasons__services-food-icon::before {
+  content: "";
+  position: absolute;
+  top: 61px;
+  left: 161px;
+  width: 75px;
+  height: 70px;
+  background: url("../img/food-index.svg") no-repeat 0 0;
+}
+
+.reasons__services-souvenirs-icon::before {
+  content: "";
+  position: absolute;
+  top: 56px;
+  left: 168px;
+  width: 64px;
+  height: 77px;
+  background: url("../img/souvenirs-index.svg") no-repeat 0 0;
 }
 
 .reasons__services-subtitle {
@@ -760,7 +791,9 @@ img {
   vertical-align: bottom;
 }
 
-.breadcrumbs__sort-item a,
+.breadcrumbs__byprice-link,
+.breadcrumbs__bytype-link,
+.breadcrumbs__byrating-link,
 .breadcrumbs__sort-span {
   font-size: 12px;
   line-height: 18px;
@@ -768,9 +801,16 @@ img {
   color: var(--black);
 }
 
-.breadcrumbs__sort-item a {
+.breadcrumbs__byprice-link,
+.breadcrumbs__bytype-link,
+.breadcrumbs__byrating-link {
   color: var(--black-rgba);
-  text-decoration: underline var(--seagull-block) dotted;
+  border-bottom: 1px dotted var(--seagull-block);
+}
+
+.breadcrumbs__sort-current {
+  color: var(--seagull-block);
+  border-bottom: none;
 }
 
 .breadcrumbs__found {
@@ -789,19 +829,32 @@ img {
   margin-right: 33px;
 }
 
-.breadcrumbs__sort-item a:hover {
-  color: var(--seagull-block);
-  text-decoration: underline var(--seagull-block) dotted;
+.breadcrumbs__byrating {
+  margin-right: 503px;
 }
 
-.breadcrumbs__sort-item a:active {
-  color: var(--black);
-  text-decoration: none;
+.breadcrumbs__up-dir {
+  margin-right: 12px;
+  margin-top: 3px;
+}
+
+.breadcrumbs__down-dir {
+  margin-top: 3px;
+}
+
+.breadcrumbs__sort-item a:hover {
+  color: var(--seagull-block);
+  border-bottom: 1px dotted var(--seagull-block);
 }
 
 .breadcrumbs__sort-item a:focus {
   color: var(--seagull-block);
-  text-decoration: none;
+  border-bottom: none;
+}
+
+.breadcrumbs__sort-item a:active {
+  color: var(--black);
+  border-bottom: none;
 }
 
 /* show hotels */
@@ -991,11 +1044,25 @@ img {
   opacity: 0.3;
 }
 
+.footer__copyright {
+  position: relative;
+}
+
 .footer__copyright-subtitle {
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
   margin: 0 196px 7px 0;
+}
+
+.footer__copyright-subtitle::before {
+  content: "";
+  position: absolute;
+  width: 115px;
+  height: 33px;
+  top: -3px;
+  left: 98px;
+  background: url("../img/logo_htmlacademy-index.svg") no-repeat 0 0;
 }
 
 /* -------------------------------modal search hotel------------------------------- */
