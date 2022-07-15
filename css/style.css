@@ -17,6 +17,7 @@
   --gray: #ababab;
   --gray-bar: rgba(0, 1, 1, 0.2);
   --dim-gray: #666666;
+  --gray-footer: #bdbbbc;
   --seagull: #81b3d3;
   --seagull-block: #81b3d2;
   --seagull-block-hover: #669ec0;
@@ -306,7 +307,7 @@ img {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3,400px);
+  grid-template-columns: repeat(3, 400px);
   text-align: center;
 }
 
@@ -419,14 +420,14 @@ img {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3,400px);
+  grid-template-columns: repeat(3, 400px);
   text-align: center;
 }
 
 .reasons__benefits-item {
   display: flex;
   flex-flow: column wrap;
-  padding:  0 10px;
+  padding: 0 10px;
 }
 
 .reasons__benefits-title,
@@ -446,7 +447,7 @@ img {
 }
 
 .reasons__benefits-span {
-  margin-bottom: 23px
+  margin-bottom: 23px;
 }
 
 .reasons__benefits-subtitle {
@@ -516,7 +517,8 @@ img {
 /* filter */
 
 .filter-background {
-  background: var(--seagull-block) url("../img/background_filter-catalog.png") 0 0 no-repeat;
+  background: var(--seagull-block) url("../img/background_filter-catalog.png") 0
+    0 no-repeat;
   min-width: 1200px;
 }
 
@@ -580,7 +582,7 @@ img {
   border-radius: 15%;
 }
 
-.filter__check-infrastructure:checked +label::after {
+.filter__check-infrastructure:checked + label::after {
   content: "";
   position: absolute;
   top: 1px;
@@ -592,7 +594,7 @@ img {
 
 .filter__item-infrastructure-pool,
 .filter__item-infrastructure-parking {
-    margin: 0 0 24px 40px;
+  margin: 0 0 24px 40px;
 }
 
 .filter__item-infrastructure-wifi {
@@ -755,6 +757,50 @@ img {
   -moz-appearance: none;
 }
 
+.filter__range-min[type="range"]:hover::-webkit-slider-thumb {
+  width: 23px;
+  height: 24px;
+  border-radius: 50%;
+  border: 9px solid var(--white);
+  background: var(--gray);
+  pointer-events: auto;
+  box-shadow: 0px 1px var(--gray);
+  -webkit-appearance: none;
+}
+
+.filter__range-max[type="range"]:hover::-webkit-slider-thumb {
+  width: 23px;
+  height: 24px;
+  border-radius: 50%;
+  border: 9px solid var(--white);
+  background: var(--gray);
+  pointer-events: auto;
+  box-shadow: 0px 1px var(--gray);
+  -webkit-appearance: none;
+}
+
+.filter__range-min[type="range"]:hover::-moz-range-thumb {
+  width: 5px;
+  height: 6px;
+  border-radius: 50%;
+  border: 9px solid var(--white);
+  background: var(--gray);
+  pointer-events: auto;
+  box-shadow: 0px 1px var(--gray);
+  -webkit-appearance: none;
+}
+
+.filter__range-max[type="range"]:hover::-moz-range-thumb {
+  width: 5px;
+  height: 6px;
+  border-radius: 50%;
+  border: 9px solid var(--white);
+  background: var(--gray);
+  pointer-events: auto;
+  box-shadow: 0px 1px var(--gray);
+  -webkit-appearance: none;
+}
+
 .filter__button {
   text-transform: uppercase;
   border: 2px solid var(--white);
@@ -857,6 +903,21 @@ img {
   border-bottom: none;
 }
 
+.breadcrumbs__up-dir-link:hover svg path,
+.breadcrumbs__down-dir-link:hover svg path {
+  fill: var(--black);
+}
+
+.breadcrumbs__up-dir-link:focus svg path,
+.breadcrumbs__down-dir-link:focus svg path {
+  fill: var(--seagull-block);
+}
+
+.breadcrumbs__up-dir-link:active svg path,
+.breadcrumbs__down-dir-link:active svg path {
+  fill: var(--seagull-block);
+}
+
 /* show hotels */
 
 .show__list,
@@ -923,12 +984,21 @@ img {
   margin-left: 17px;
 }
 
+.show__star-rating {
+  width: 110px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: end;
+}
+
 .show__item-rating {
   font-size: 14px;
   font-weight: 400;
   color: var(--dim-gray);
   background-color: var(--white-smoke);
   margin: 0;
+  margin-top: 46px;
+  padding: 3px 12px 3px 15px;
 }
 
 .show__item-detail,
@@ -977,7 +1047,7 @@ img {
 .footer__wrapper {
   min-height: 120px;
   display: grid;
-  grid-template-columns: repeat(3,400px);
+  grid-template-columns: repeat(3, 400px);
   place-items: center;
   background-color: var(--white-rgba-footer);
 }
@@ -1055,14 +1125,21 @@ img {
   margin: 0 196px 7px 0;
 }
 
-.footer__copyright-subtitle::before {
+.footer__copyright-subtitle a {
   content: "";
   position: absolute;
   width: 115px;
   height: 33px;
   top: -3px;
   left: 98px;
-  background: url("../img/logo_htmlacademy-index.svg") no-repeat 0 0;
+}
+
+.footer__copyright-subtitle-link:hover path {
+  fill: var(--seagull-block);
+}
+
+.footer__copyright-subtitle-link:active path {
+  fill: var(--gray-footer);
 }
 
 /* -------------------------------modal search hotel------------------------------- */
