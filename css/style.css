@@ -1181,8 +1181,8 @@ img {
 }
 
 .modal-search__margin {
+  position: relative;
   margin: 55px;
-  outline: 2px solid red;
 }
 
 .modal-search__title-date-in,
@@ -1195,6 +1195,28 @@ img {
   margin-bottom: 54px;
 }
 
+.modal-search__title-date-in::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  width: 21px;
+  height: 23px;
+  background: url("../img/calendar.svg") no-repeat 0 0;
+}
+
+.modal-search__title-date-out::after {
+  content: "";
+  position: absolute;
+  top: 75px;
+  right: 10px;
+  cursor: pointer;
+  width: 21px;
+  height: 23px;
+  background: url("../img/calendar.svg") no-repeat 0 0;
+}
+
 .modal-search__form label {
   font-size: 14px;
   line-height: 26px;
@@ -1205,13 +1227,29 @@ img {
 }
 
 .modal-search__date-in {
-  width: 346px;
+  margin-left: 20px;
 }
 
-.modal-search__date-in[value="24 апреля 2017"],
-.modal-search__date-out[value="4 июля 2017"],
-.modal-search__adults-count[value="2"],
-.modal-search__kids-count[value="0"] {
+.modal-search__date-out {
+  margin-left: 16px;
+}
+
+.modal-search__adults-count {
+  margin-left: 36px;
+}
+
+.modal-search__kids-count {
+  margin-left: 20px;
+}
+
+.modal-search__title-adults-kids label:last-child {
+  margin-left: 53px;
+}
+
+.modal-search__date-in[type=text],
+.modal-search__date-out[type=text],
+.modal-search__adults-count[type=text],
+.modal-search__kids-count[type=text] {
   font-family: inherit;
   font-style: inherit;
   font-size: 14px;
@@ -1253,7 +1291,7 @@ img {
   line-height: 26px;
   color: var(--white);
   background-color: var(--seagull-block);
-  padding: 16px 181px;
+  padding: 16px 196px;
 }
 
 .modal-search__button-find:hover {
