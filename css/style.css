@@ -94,7 +94,7 @@ img {
 }
 
 .container-shadow {
-  box-shadow: 0px 5px 15px var(--gray-bar);
+  box-shadow: 0px 5px 15px 5px var(--gray-bar);
 }
 
 .grid {
@@ -142,7 +142,7 @@ img {
 }
 
 .navigation__item-info {
-  margin: 0 134px 0 72px;
+  margin: 0 134px 0 73px;
 }
 
 .navigation__item-foto {
@@ -207,7 +207,7 @@ img {
   display: block;
   position: absolute;
   top: 76px;
-  left: 372px;
+  left: 371px;
 }
 
 .banner-background::after {
@@ -324,14 +324,14 @@ img {
 }
 
 .reasons__services-title {
-  margin: 160px 0 25px 0;
+  margin: 160px -1px 26px -1px;
 }
 
 .reasons__services-house-icon::before {
   content: "";
   position: absolute;
   top: 61px;
-  left: 161px;
+  left: 162px;
   width: 75px;
   height: 72px;
   background: url("../img/housing-index.svg") no-repeat 0 0;
@@ -341,7 +341,7 @@ img {
   content: "";
   position: absolute;
   top: 61px;
-  left: 161px;
+  left: 162px;
   width: 75px;
   height: 70px;
   background: url("../img/food-index.svg") no-repeat 0 0;
@@ -361,7 +361,8 @@ img {
   font-size: 14px;
   font-weight: 400;
   color: var(--night-rider);
-  margin-bottom: 82px;
+  margin-bottom: 81px;
+  margin-left: 2px;
 }
 
 /* bridge of Devil */
@@ -443,7 +444,7 @@ img {
 }
 
 .reasons__benefits-title {
-  margin: 47px 0 28px 0;
+  margin: 48px -1px 27px 0;
 }
 
 .reasons__benefits-span {
@@ -470,13 +471,14 @@ img {
 .search__title {
   font-size: 30px;
   line-height: 24px;
-  margin: 58px 12px 35px 0;
+  margin: 56px 11px 34px 0;
 }
 
 .search__subtitle {
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 48px;
+  margin-bottom: 43px;
+  line-height: 24px;
 }
 
 .search__button {
@@ -488,7 +490,8 @@ img {
 
 .search__button-search {
   color: var(--white);
-  padding: 32px 139px;
+  padding: 30px 139px;
+  line-height: 26px;
 }
 
 .search__button-search:hover {
@@ -569,45 +572,47 @@ img {
   display: block;
   cursor: pointer;
   user-select: none;
+  padding-left: 40px;
 }
 
 .filter__check-infrastructure + label::before {
   content: "";
   position: absolute;
-  left: -40px;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--white);
-  border-radius: 15%;
+  left: 0px;
+  width: 23px;
+  height: 23px;
+  background: url("../img/checkbox-off.svg") no-repeat 0 0;
 }
 
 .filter__check-infrastructure:checked + label::after {
   content: "";
   position: absolute;
-  top: 1px;
-  left: -35px;
-  width: 21px;
-  height: 16px;
-  background: url("../img/checkmark.svg") no-repeat;
+  left: 0px;
+  width: 27px;
+  height: 23px;
+  background: url("../img/checkbox-on.svg");
+}
+
+.filter__check-infrastructure:checked + label::before {
+  display: none;
 }
 
 .filter__item-infrastructure-pool,
 .filter__item-infrastructure-parking {
-  margin: 0 0 24px 40px;
+  margin: 0 0 25px 0px;
 }
 
 .filter__item-infrastructure-wifi {
-  margin-left: 39px;
+  margin: -1px 0 0 0px;
 }
 
 .filter__item-infrastructure-hotels,
 .filter__item-infrastructure-motels {
-  margin: 0 0 25px 43px;
+  margin: 0 0 25px 1px;
 }
 
 .filter__item-infrastructure-appartments {
-  margin-left: 43px;
+  margin: -1px 0 0 1px;
 }
 
 .filter__cost-wrapper {
@@ -626,7 +631,7 @@ img {
 
 .filter__list-cost-input {
   width: 100%;
-  margin: -12px 2px 19px 0;
+  margin: -14px 2px 20px 1px;
   border: 2px solid var(--white);
   display: flex;
   position: relative;
@@ -655,12 +660,12 @@ img {
 
 .filter__cost-input-min {
   margin-left: 9px;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 
 .filter__cost-input-max {
   margin-left: -1px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .filter__item-field input[type="number"]::-webkit-outer-spin-button,
@@ -670,14 +675,14 @@ img {
 
 .filter__item-field:nth-child(1) label {
   position: absolute;
-  top: 3px;
-  left: 67px;
+  top: 4px;
+  left: 66px;
 }
 
 .filter__item-field:last-child label {
   position: absolute;
   right: 83px;
-  top: 3px;
+  top: 4px;
 }
 
 .filter__item-separator {
@@ -685,8 +690,8 @@ img {
   height: 22px;
   background: var(--white);
   position: absolute;
-  left: 158px;
-  bottom: 7px;
+  left: 157px;
+  bottom: 5px;
 }
 
 .filter__item-infrastructure label:hover {
@@ -806,8 +811,8 @@ img {
   border: 2px solid var(--white);
   background-color: transparent;
   cursor: pointer;
-  margin-left: 84px;
-  padding: 7px 35px 9px 36px;
+  margin-left: 86px;
+  padding: 7px 34px 9px 34px;
 }
 
 .filter__button:hover {
@@ -860,11 +865,12 @@ img {
 }
 
 .breadcrumbs__found {
-  margin-right: 46px;
+  margin-right: 47px;
 }
 
 .breadcrumbs__sorting {
-  margin-right: 40px;
+  margin-right: 41px;
+  margin-top: -1px;
 }
 
 .breadcrumbs__byprice {
@@ -929,6 +935,7 @@ img {
 
 .show__list {
   margin: 0 72px 0 73px;
+  position: relative;
 }
 
 .show__list-list {
@@ -938,6 +945,16 @@ img {
 
 .show__item {
   margin-bottom: 61px;
+}
+
+.show__item::before {
+  content: "";
+  position: absolute;
+  min-width: 1200px;
+  border: 1px solid var(--whisper-focus);
+  background-color: var(--whisper-focus);
+  transform: translate(-73px, -30px);
+  opacity: 0.6;
 }
 
 .show__item:last-child {
@@ -1052,6 +1069,17 @@ img {
   background-color: var(--white-rgba-footer);
 }
 
+.footer__wrapper::before {
+  content: "";
+  position: absolute;
+  min-width: 1200px;
+  border: 1px solid var(--whisper-focus);
+  background-color: var(--whisper-focus);
+  transform: translate(0px, -60px);
+  opacity: 0.6;
+}
+
+
 .footer__contacts,
 .footer__social,
 .footer__copyright {
@@ -1061,7 +1089,7 @@ img {
 .footer__contacts-address {
   font-style: normal;
   min-height: 120px;
-  margin-bottom: -44px;
+  margin-bottom: -45px;
 }
 
 .footer__contacts-link {
@@ -1072,23 +1100,22 @@ img {
 }
 
 .footer__contacts-link:first-child {
-  margin-bottom: 10px;
-  margin-left: 87px;
+  margin-bottom: 9px;
+  margin-left: 88px;
 }
 
 .footer__contacts-link:last-child {
-  margin-left: 71px;
+  margin-left: 72px;
 }
 
 .footer__social-list {
-  width: 162px;
+  width: 150px;
   list-style: none;
   margin: 0;
-  margin-top: -5px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .footer__social-button {
@@ -1122,7 +1149,7 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
-  margin: 0 196px 7px 0;
+  margin: 4px 195px 7px 0;
 }
 
 .footer__copyright-subtitle a {
@@ -1130,8 +1157,8 @@ img {
   position: absolute;
   width: 115px;
   height: 33px;
-  top: -3px;
-  left: 98px;
+  top: 1px;
+  left: 99px;
 }
 
 .footer__copyright-subtitle-link:hover path {
@@ -1148,8 +1175,24 @@ img {
   background-color: var(--white);
 }
 
-.modal-search__form p {
+.modal-search__form {
+  width: 568px;
+  margin: 0 auto;
+}
+
+.modal-search__margin {
+  margin: 55px;
+  outline: 2px solid red;
+}
+
+.modal-search__title-date-in,
+.modal-search__title-date-out {
   margin: 0;
+  margin-bottom: 30px;
+}
+
+.modal-search__title-adults-kids {
+  margin-bottom: 54px;
 }
 
 .modal-search__form label {
@@ -1159,6 +1202,10 @@ img {
 
 .modal-search__form input {
   border: none;
+}
+
+.modal-search__date-in {
+  width: 346px;
 }
 
 .modal-search__date-in[value="24 апреля 2017"],
@@ -1175,17 +1222,29 @@ img {
   background-color: var(--white-smoke);
 }
 
-.modal-search__date-in[value="24 апреля 2017"]:hover,
-.modal-search__date-out[value="4 июля 2017"]:hover,
-.modal-search__adults-count[value="2"]:hover,
-.modal-search__kids-count[value="0"]:hover {
+.modal-search__date-in[type=text],
+.modal-search__date-out[type=text] {
+  width: 346px;
+  padding: 6px 40px 6px 12px;
+}
+
+.modal-search__adults-count[type=text],
+.modal-search__kids-count[type=text] {
+  width: 114px;
+  padding: 6px 39px;
+}
+
+.modal-search__date-in[type=text]:hover,
+.modal-search__date-out[type=text]:hover,
+.modal-search__adults-count[type=text]:hover,
+.modal-search__kids-count[type=text]:hover {
   background-color: var(--whisper-hover);
 }
 
-.modal-search__date-in[value="24 апреля 2017"]:focus,
-.modal-search__date-out[value="4 июля 2017"]:focus,
-.modal-search__adults-count[value="2"]:focus,
-.modal-search__kids-count[value="0"]:focus {
+.modal-search__date-in[type=text]:focus,
+.modal-search__date-out[type=text]:focus,
+.modal-search__adults-count[type=text]:focus,
+.modal-search__kids-count[type=text]:focus {
   border: 2px solid var(--whisper-focus);
   background-color: var(--white);
 }
@@ -1194,6 +1253,7 @@ img {
   line-height: 26px;
   color: var(--white);
   background-color: var(--seagull-block);
+  padding: 16px 181px;
 }
 
 .modal-search__button-find:hover {
