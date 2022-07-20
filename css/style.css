@@ -16,6 +16,7 @@
   --roman-coffee-active: #503e33;
   --gray: #ababab;
   --gray-bar: rgba(0, 1, 1, 0.2);
+  --gray-modal: rgba(0, 1, 1, 0.15);
   --dim-gray: #666666;
   --gray-footer: #bdbbbc;
   --seagull: #81b3d3;
@@ -26,10 +27,6 @@
 }
 
 /* -------------------------------global------------------------------- */
-
-* {
-  box-sizing: border-box;
-}
 
 .page {
   height: 100%;
@@ -94,7 +91,7 @@ img {
 }
 
 .container-shadow {
-  box-shadow: 0px 5px 15px 5px var(--gray-bar);
+  box-shadow: 0px 5px 15px var(--gray-bar);
 }
 
 .grid {
@@ -263,6 +260,7 @@ img {
   flex-flow: column wrap;
   justify-content: center;
   padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .reasons__description-title,
@@ -387,6 +385,7 @@ img {
   flex-flow: column wrap;
   justify-content: center;
   padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .reasons__attraction-title,
@@ -1181,8 +1180,9 @@ img {
 }
 
 .modal-search__margin {
-  margin: 55px;
-  outline: 2px solid red;
+  position: relative;
+  padding: 55px;
+  box-shadow: 0px 7px 15px var(--gray-modal);
 }
 
 .modal-search__title-date-in,
@@ -1193,6 +1193,85 @@ img {
 
 .modal-search__title-adults-kids {
   margin-bottom: 54px;
+  position: relative;
+}
+
+.modal-search__title-date-in svg {
+  position: absolute;
+  width: 21px;
+  height: 23px;
+  top: 62px;
+  right: 70px;
+  cursor: pointer;
+}
+
+.modal-search__title-date-out svg {
+  position: absolute;
+  width: 21px;
+  height: 23px;
+  top: 130px;
+  right: 70px;
+  cursor: pointer;
+}
+
+.modal-search__title-date-in path:hover,
+.modal-search__title-date-out path:hover,
+.modal-search__adults-svg-plus path:hover,
+.modal-search__kids-svg-plus path:hover {
+  fill: var(--black);
+}
+
+.modal-search__adults-svg-minus rect:hover,
+.modal-search__kids-svg-minus rect:hover {
+  fill: var(--black);
+}
+
+.modal-search__title-date-in path:active,
+.modal-search__title-date-out path:active,
+.modal-search__adults-svg-plus path:active,
+.modal-search__kids-svg-plus path:active {
+  fill: var(--seagull-block);
+}
+
+.modal-search__adults-svg-minus rect:active,
+.modal-search__kids-svg-minus rect:active {
+  fill: var(--seagull-block);
+}
+
+.modal-search__adults-svg-minus {
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 17px;
+  left: 127px;
+  cursor: pointer;
+}
+
+.modal-search__adults-svg-plus {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: 13px;
+  left: 197px;
+  cursor: pointer;
+}
+
+.modal-search__kids-svg-minus {
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 17px;
+  right: 87px;
+  cursor: pointer;
+}
+
+.modal-search__kids-svg-plus {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: 13px;
+  right: 17px;
+  cursor: pointer;
 }
 
 .modal-search__form label {
@@ -1202,16 +1281,34 @@ img {
 
 .modal-search__form input {
   border: none;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .modal-search__date-in {
-  width: 346px;
+  margin-left: 20px;
 }
 
-.modal-search__date-in[value="24 апреля 2017"],
-.modal-search__date-out[value="4 июля 2017"],
-.modal-search__adults-count[value="2"],
-.modal-search__kids-count[value="0"] {
+.modal-search__date-out {
+  margin-left: 16px;
+}
+
+.modal-search__adults-count {
+  margin-left: 36px;
+}
+
+.modal-search__kids-count {
+  margin-left: 20px;
+}
+
+.modal-search__title-adults-kids label:last-child {
+  margin-left: 53px;
+}
+
+.modal-search__date-in[type=text],
+.modal-search__date-out[type=text],
+.modal-search__adults-count[type=text],
+.modal-search__kids-count[type=text] {
   font-family: inherit;
   font-style: inherit;
   font-size: 14px;
@@ -1232,6 +1329,7 @@ img {
 .modal-search__kids-count[type=text] {
   width: 114px;
   padding: 6px 39px;
+  text-align: center;
 }
 
 .modal-search__date-in[type=text]:hover,
@@ -1247,13 +1345,16 @@ img {
 .modal-search__kids-count[type=text]:focus {
   border: 2px solid var(--whisper-focus);
   background-color: var(--white);
+  outline: none;
 }
 
 .modal-search__button-find {
+  display: block;
   line-height: 26px;
+  padding: 16px 0;
+  text-align: center;
   color: var(--white);
   background-color: var(--seagull-block);
-  padding: 16px 181px;
 }
 
 .modal-search__button-find:hover {
