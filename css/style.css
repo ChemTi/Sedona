@@ -281,9 +281,6 @@ img {
 .reasons__description-subtitle {
   margin-bottom: 7px;
 }
-/* .reasons__description-span {
-  margin: 25px 0 23px 0;
-} */
 
 .reasons__description-span,
 .reasons__description-subtitle {
@@ -332,7 +329,7 @@ img {
   left: 162px;
   width: 75px;
   height: 72px;
-  background: url("../img/housing-index.svg") no-repeat 0 0;
+  background: url("/img/housing-index.svg") no-repeat 0 0;
 }
 
 .reasons__services-food-icon::before {
@@ -342,7 +339,7 @@ img {
   left: 162px;
   width: 75px;
   height: 70px;
-  background: url("../img/food-index.svg") no-repeat 0 0;
+  background: url("/img/food-index.svg") no-repeat 0 0;
 }
 
 .reasons__services-souvenirs-icon::before {
@@ -352,7 +349,7 @@ img {
   left: 168px;
   width: 64px;
   height: 77px;
-  background: url("../img/souvenirs-index.svg") no-repeat 0 0;
+  background: url("/img/souvenirs-index.svg") no-repeat 0 0;
 }
 
 .reasons__services-subtitle {
@@ -519,7 +516,7 @@ img {
 /* filter */
 
 .filter-background {
-  background: var(--seagull-block) url("../img/background_filter-catalog.png") 0
+  background: var(--seagull-block) url("/img/background_filter-catalog.png") 0
     0 no-repeat;
   min-width: 1200px;
 }
@@ -580,7 +577,7 @@ img {
   left: 0px;
   width: 23px;
   height: 23px;
-  background: url("../img/checkbox-off.svg") no-repeat 0 0;
+  background: url("/img/checkbox-off.svg") no-repeat 0 0;
 }
 
 .filter__check-infrastructure:checked + label::after {
@@ -589,7 +586,7 @@ img {
   left: 0px;
   width: 27px;
   height: 23px;
-  background: url("../img/checkbox-on.svg");
+  background: url("/img/checkbox-on.svg");
 }
 
 .filter__check-infrastructure:checked + label::before {
