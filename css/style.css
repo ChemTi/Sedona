@@ -548,6 +548,7 @@ img {
 
 .filter__fieldset-cost {
   margin-left: 309px;
+  width: 317px;
 }
 
 .filter legend {
@@ -612,10 +613,10 @@ img {
   margin: -1px 0 0 1px;
 }
 
-.filter__cost-wrapper {
+/* .filter__cost-wrapper {
   width: 317px;
   margin-bottom: 33px;
-}
+} */
 
 .filter__list-cost-input,
 .filter__list-slider,
@@ -627,7 +628,7 @@ img {
 }
 
 .filter__list-cost-input {
-  width: 100%;
+  width: 317px;
   margin: -14px 2px 20px 1px;
   border: 2px solid var(--white);
   display: flex;
@@ -661,7 +662,7 @@ img {
 }
 
 .filter__cost-input-max {
-  margin-left: -1px;
+  margin-left: -5px;
   margin-bottom: 4px;
 }
 
@@ -721,6 +722,7 @@ img {
 
 .filter__list-range-input {
   position: relative;
+  margin-bottom: 33px;
 }
 
 .filter__list-range-input .filter__range-min,
@@ -734,9 +736,9 @@ img {
   -webkit-appearance: none;
 }
 
-.filter__list-range-input .filter__range-max {
+/* .filter__list-range-input .filter__range-max {
   left: 165px;
-}
+} */
 
 .filter__list-range-input input[type="range"]::-webkit-slider-thumb {
   width: 20px;
