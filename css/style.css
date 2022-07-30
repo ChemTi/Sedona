@@ -133,6 +133,7 @@ img {
 }
 
 .navigation__list {
+  width: 1200px;
   min-height: 56px;
   margin: 0;
   padding: 0;
@@ -403,7 +404,7 @@ img {
 }
 
 .reasons__attraction-span {
-  padding: 26px 0 23px 0;
+  padding: 26px 0 23px;
 }
 
 .reasons__attraction-background {
@@ -516,9 +517,9 @@ img {
 /* map */
 
 .map__background {
-  background-color: var(--green-light);
   width: 1200px;
   height: 594px;
+  background: var(--green-light) url("../img/map-index.png") 0 0 no-repeat;
 }
 
 /* filter */
@@ -608,7 +609,7 @@ img {
 }
 
 .filter__item-infrastructure-wifi {
-  margin: -1px 0 0 0px;
+  margin: -1px 0 25px 0px;
 }
 
 .filter__item-infrastructure-hotels,
@@ -617,7 +618,7 @@ img {
 }
 
 .filter__item-infrastructure-appartments {
-  margin: -1px 0 0 1px;
+  margin: -1px 0 25px 1px;
 }
 
 /* .filter__cost-wrapper {
@@ -814,7 +815,7 @@ img {
   background-color: transparent;
   cursor: pointer;
   margin-left: 86px;
-  padding: 7px 34px 9px 34px;
+  padding: 7px 34px 9px;
 }
 
 .filter__button:hover {
@@ -829,8 +830,9 @@ img {
 /* breadcrumbs */
 
 .breadcrumbs__sort-list {
+  width: 1054px;
   list-style: none;
-  margin: 29px 0 62px 73px;
+  margin: 29px 73px 62px 73px;
   padding: 0;
   display: flex;
   flex-flow: row wrap;
@@ -888,7 +890,7 @@ img {
 }
 
 .breadcrumbs__byrating {
-  margin-right: 503px;
+  margin-right: 502px;
 }
 
 .breadcrumbs__up-dir {
@@ -1084,7 +1086,6 @@ img {
   transform: translate(0px, -60px);
   opacity: 0.6;
 }
-
 
 .footer__contacts,
 .footer__social,
@@ -1318,10 +1319,10 @@ img {
   margin-left: 53px;
 }
 
-.modal-search__date-in[type=text],
-.modal-search__date-out[type=text],
-.modal-search__adults-count[type=text],
-.modal-search__kids-count[type=text] {
+.modal-search__date-in[type="text"],
+.modal-search__date-out[type="text"],
+.modal-search__adults-count[type="text"],
+.modal-search__kids-count[type="text"] {
   font-family: inherit;
   font-style: inherit;
   font-size: 14px;
@@ -1332,30 +1333,30 @@ img {
   background-color: var(--white-smoke);
 }
 
-.modal-search__date-in[type=text],
-.modal-search__date-out[type=text] {
+.modal-search__date-in[type="text"],
+.modal-search__date-out[type="text"] {
   width: 346px;
   padding: 6px 40px 6px 12px;
 }
 
-.modal-search__adults-count[type=text],
-.modal-search__kids-count[type=text] {
+.modal-search__adults-count[type="text"],
+.modal-search__kids-count[type="text"] {
   width: 114px;
   padding: 6px 39px;
   text-align: center;
 }
 
-.modal-search__date-in[type=text]:hover,
-.modal-search__date-out[type=text]:hover,
-.modal-search__adults-count[type=text]:hover,
-.modal-search__kids-count[type=text]:hover {
+.modal-search__date-in[type="text"]:hover,
+.modal-search__date-out[type="text"]:hover,
+.modal-search__adults-count[type="text"]:hover,
+.modal-search__kids-count[type="text"]:hover {
   background-color: var(--whisper-hover);
 }
 
-.modal-search__date-in[type=text]:focus,
-.modal-search__date-out[type=text]:focus,
-.modal-search__adults-count[type=text]:focus,
-.modal-search__kids-count[type=text]:focus {
+.modal-search__date-in[type="text"]:focus,
+.modal-search__date-out[type="text"]:focus,
+.modal-search__adults-count[type="text"]:focus,
+.modal-search__kids-count[type="text"]:focus {
   border: 2px solid var(--whisper-focus);
   background-color: var(--white);
   outline: none;
