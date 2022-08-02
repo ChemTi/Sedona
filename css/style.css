@@ -621,11 +621,6 @@ img {
   margin: -1px 0 25px 1px;
 }
 
-/* .filter__cost-wrapper {
-  width: 317px;
-  margin-bottom: 33px;
-} */
-
 .filter__list-cost-input,
 .filter__list-slider,
 .filter__list-range-input {
@@ -704,6 +699,10 @@ img {
   color: var(--white);
 }
 
+.filter__item-infrastructure:focus-within {
+  outline: auto;
+}
+
 .filter__form label,
 .filter__button {
   font-size: 14px;
@@ -744,6 +743,11 @@ img {
   -webkit-appearance: none;
 }
 
+.filter__range-min,
+.filter__range-max {
+  outline: none;
+}
+
 .filter__list-range-input input[type="range"]::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
@@ -765,17 +769,7 @@ img {
   -moz-appearance: none;
 }
 
-.filter__range-min[type="range"]:hover::-webkit-slider-thumb {
-  width: 23px;
-  height: 24px;
-  border-radius: 50%;
-  border: 9px solid var(--white);
-  background: var(--gray);
-  pointer-events: auto;
-  box-shadow: 0px 1px var(--gray);
-  -webkit-appearance: none;
-}
-
+.filter__range-min[type="range"]:hover::-webkit-slider-thumb,
 .filter__range-max[type="range"]:hover::-webkit-slider-thumb {
   width: 23px;
   height: 24px;
@@ -787,7 +781,8 @@ img {
   -webkit-appearance: none;
 }
 
-.filter__range-min[type="range"]:hover::-moz-range-thumb {
+.filter__range-min[type="range"]:hover::-moz-range-thumb,
+.filter__range-max[type="range"]:hover::-moz-range-thumb {
   width: 5px;
   height: 6px;
   border-radius: 50%;
@@ -798,15 +793,14 @@ img {
   -webkit-appearance: none;
 }
 
-.filter__range-max[type="range"]:hover::-moz-range-thumb {
-  width: 5px;
-  height: 6px;
-  border-radius: 50%;
-  border: 9px solid var(--white);
-  background: var(--gray);
-  pointer-events: auto;
-  box-shadow: 0px 1px var(--gray);
-  -webkit-appearance: none;
+.filter__range-min[type="range"]:focus::-moz-range-thumb,
+.filter__range-max[type="range"]:focus::-moz-range-thumb {
+  outline: auto;
+}
+
+.filter__range-min[type="range"]:focus::-webkit-slider-thumb,
+.filter__range-max[type="range"]:focus::-webkit-slider-thumb {
+  outline: auto;
 }
 
 .filter__button {
