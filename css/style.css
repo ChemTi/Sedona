@@ -75,6 +75,10 @@ img {
   display: none;
 }
 
+.show {
+  display: block;
+}
+
 /* -------------------------------container & grid------------------------------- */
 
 .page-body-catalog {
@@ -602,6 +606,10 @@ img {
 .filter__check-infrastructure:checked + label::before {
   display: none;
 }
+
+/* .filter__check-infrastructure:focus + label {
+  outline: auto;
+} */
 
 .filter__item-infrastructure-pool,
 .filter__item-infrastructure-parking {
