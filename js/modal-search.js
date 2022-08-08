@@ -1,28 +1,22 @@
 const modal = document.querySelector(".modal-search");
 const buttonSearch = document.querySelector(".search__button-search");
 
-// buttonSearch.onclick = (evt) => {
-//   evt.preventDefault();
-//   modal.classList.toggle("display-none");
-// };
+// open/close modal by button
+  buttonSearch.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    modal.classList.toggle("display-none");
+    evt.stopPropagation();
+  });
 
-// buttonSearch.addEventListener("click", (evt) => {
-//   evt.preventDefault();
-//   if (modal.classList.contains("display-none")) {
-//     modal.classList.remove("display-none");
-//   } else {
-//     modal.classList.add("display-none");
-//   }
-// });
+  // close modal by click outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest(".modal-search"))
+    modal.classList.add("display-none")
+  });
 
-
-buttonSearch.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  modal.classList.toggle("display-none");
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === "Escape") {
-    modal.classList.add("display-none");
-  }
-})
+// close modal by Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+      modal.classList.add("display-none");
+    }
+  })
