@@ -338,7 +338,7 @@ img {
   left: 162px;
   width: 75px;
   height: 72px;
-  background: url("/img/housing-index.svg") no-repeat 0 0;
+  background: url("../img/housing-index.svg") no-repeat 0 0;
 }
 
 .reasons__services-food-icon::before {
@@ -348,7 +348,7 @@ img {
   left: 162px;
   width: 75px;
   height: 70px;
-  background: url("/img/food-index.svg") no-repeat 0 0;
+  background: url("../img/food-index.svg") no-repeat 0 0;
 }
 
 .reasons__services-souvenirs-icon::before {
@@ -358,7 +358,7 @@ img {
   left: 168px;
   width: 64px;
   height: 77px;
-  background: url("/img/souvenirs-index.svg") no-repeat 0 0;
+  background: url("../img/souvenirs-index.svg") no-repeat 0 0;
 }
 
 .reasons__services-subtitle {
