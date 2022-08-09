@@ -31,7 +31,7 @@
             <a class="navigation__link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <a class="navigation__logo" href="index.html">
+        <a class="navigation__logo" href="index.html" aria-label="link to go to main page">
           <img src="img/logo-index.png" width="138" height="70" alt="Логотип городка Седона" />
         </a>
       </nav>
@@ -99,23 +99,23 @@
             <legend>Стоимость в сутки, <span>&#8381;</span>:</legend>
             <ul class="filter__list-cost-input">
               <li class="filter__item-field">
-                <label for="filter__input-min-min">от</label>
                 <input class="filter__cost-input-min" type="number" value="0" id="filter__input-min-min" />
+                <label for="filter__input-min-min" aria-label="min value">от</label>
               </li>
               <li class="filter__item-separator"></li>
               <li class="filter__item-field">
-                <label for="filter__input-max-max">до</label>
                 <input class="filter__cost-input-max" type="number" value="3000" id="filter__input-max-max">
+                <label for="filter__input-max-max" aria-label="max value">до</label>
               </li>
             </ul>
             <ul class="filter__list-slider">
               <li class="filter__item-progress"></li>
             </ul>
             <div class="filter__list-range-input">
-              <input class="filter__range-min" type="range" min="0" max="3000" value="0" step="10">
-              <input class="filter__range-max" type="range" min="0" max="3000" value="2520" step="10">
+              <input class="filter__range-min" type="range" min="0" max="3000" value="0" step="10" aria-label="min range thumb">
+              <input class="filter__range-max" type="range" min="0" max="3000" value="2520" step="10" aria-label="max range thumb">
             </div>
-            <button class="filter__button" type="submit" aria-label="show checked hotels">показать</button>
+            <button class="filter__button" type="submit" aria-label="button show checked hotels">показать</button>
           </fieldset>
         </form>
       </section>
@@ -269,8 +269,8 @@
         <section class="footer__contacts" aria-label="contacts">
           <h2 class="visually-hidden">Contacts</h2>
           <address class="footer__contacts-address">
-            <a class="footer__contacts-link" href="#">#visitSEDONA</a>
-            <a class="footer__contacts-link" href="tel:+78005558628">+7 800 555-86-28</a>
+            <a class="footer__contacts-link" href="#" aria-label="link to Sedona">#visitSEDONA</a>
+            <a class="footer__contacts-link" href="tel:+78005558628" aria-label="telephone">+7 800 555-86-28</a>
           </address>
         </section>
         <section class="footer__social" aria-label="social">
@@ -279,7 +279,7 @@
             <li class="footer__social-item">
               <a class="footer__social-button" href="https://twitter.com">
                 <span class="visually-hidden">Twitter</span>
-                <svg role="img" aria-label="twitter icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
                     fill="white" />
@@ -289,7 +289,7 @@
             <li class="footer__social-item">
               <a class="footer__social-button" href="https://facebook.com">
                 <span class="visually-hidden">Facebook</span>
-                <svg role="img" aria-label="facebook icon" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
                 </svg>
               </a>
@@ -297,7 +297,7 @@
             <li class="footer__social-item">
               <a class="footer__social-button" href="https://youtube.com">
                 <span class="visually-hidden">Youtube</span>
-                <svg role="img" aria-label="youtube icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg aria-hidden="true" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
                     fill="white" />
@@ -311,7 +311,7 @@
           <p class="footer__copyright-subtitle">
             Website by
             <a class="footer__copyright-subtitle-link" href="https://htmlacademy.ru/intensive/htmlcss">
-              <svg role="img" aria-label="copyright icon" aria-hidden="true" width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg aria-hidden="true" width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 12.8691V15.4429H2.45789V12.8691H0Z" fill="black" />
                 <path
                   d="M11.6466 4.52562C10.0863 4.52562 8.82534 5.23341 8.03454 6.26294H7.94905V0H5.91864V15.4429H7.94905V10.1451C7.94905 8.02172 9.27418 6.49888 11.2191 6.49888C13.0572 6.49888 14.1258 7.87158 14.1258 9.71614V15.4429H16.1563V9.35153C16.1563 6.41308 14.3396 4.52562 11.6466 4.52562Z"
