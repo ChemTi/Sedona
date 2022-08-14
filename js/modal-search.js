@@ -16,7 +16,7 @@ const buttonSearch = document.querySelector(".search__button-search");
 
 // close modal by Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
+    if (e.key === "Escape" && !modal.classList.contains("display-none")) {
       modal.classList.add("display-none");
     }
   })
