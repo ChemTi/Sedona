@@ -2,10 +2,10 @@ const modal = document.querySelector(".modal-search");
 const buttonSearch = document.querySelector(".search__button-search");
 
 // open/close modal by button
-  buttonSearch.addEventListener("click", (evt) => {
-    evt.preventDefault();
+  buttonSearch.addEventListener("click", (e) => {
+    e.preventDefault();
     modal.classList.toggle("display-none");
-    evt.stopPropagation();
+    e.stopPropagation();
   });
 
   // close modal by click outside
