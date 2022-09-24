@@ -14,8 +14,8 @@
   <link rel="apple-touch-icon" href="img/favicons/180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <title>HTML Academy: {{Sedona}}</title>
-  <!-- <script defer src="js/modal-search.js"></script> -->
-  <script defer src="js/modal-search.min.js"></script>
+  <script defer src="js/modal-search.js"></script>
+  <!-- <script defer src="js/modal-search.min.js"></script> -->
 </head>
 
 
@@ -184,7 +184,7 @@
             <div class="modal-search__margin">
               <p class="modal-search__title-date-in">
                 <label>Дата заезда:
-                  <input class="modal-search__date-in" type="text" value="24 апреля 2017" name="date-in" autofocus/>
+                  <input class="modal-search__date-in" type="text" value="24 апреля 2017" name="date-in" autofocus required/>
                 </label>
                 <svg tabindex="0" role="img" aria-label="calendar icon" width="21" height="23" viewBox="0 0 21 23" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -195,7 +195,7 @@
               </p>
               <p class="modal-search__title-date-out">
                 <label>Дата выезда:
-                  <input class="modal-search__date-out" type="text" value="4 июля 2017" name="date-out" />
+                  <input class="modal-search__date-out" type="text" value="4 июля 2017" name="date-out" required/>
                 </label>
                 <svg tabindex="0" role="img" aria-label="calendar icon" width="21" height="23" viewBox="0 0 21 23" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -210,7 +210,7 @@
                     viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9" />
                   </svg>
-                  <input class="modal-search__adults-count" type="text" value="2" name="adults" />
+                  <input class="modal-search__adults-count" type="text" value="2" name="adults" required/>
                   <svg tabindex="0" class="modal-search__adults-svg-plus" role="img" aria-label="plus icon" width="11" height="11"
                     viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -223,7 +223,7 @@
                     viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9" />
                   </svg>
-                  <input class="modal-search__kids-count" type="text" value="0" name="kids" />
+                  <input class="modal-search__kids-count" type="text" value="0" name="kids" required/>
                   <svg tabindex="0" class="modal-search__kids-svg-plus" role="img" aria-label="plus icon" width="11" height="11"
                     viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
