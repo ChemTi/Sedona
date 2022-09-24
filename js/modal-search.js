@@ -7,9 +7,9 @@ const dateOut = modal.querySelector("[name=date-out]");
 // open/close modal by button
 buttonSearch.addEventListener("click", (e) => {
   e.preventDefault();
-  modal.classList.toggle("display-none");
+  modal.classList.toggle("show");
   e.stopPropagation();
-  dateIn.focus();
+  // dateIn.focus();
 });
 
 // close modal by click outside

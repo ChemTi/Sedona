@@ -1187,7 +1187,8 @@ img {
 .modal-search-position {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%);
+  animation: bounce 1.2s;
 }
 
 .modal-search__form {
@@ -1380,4 +1381,27 @@ img {
 .modal-search__button-find:active {
   color: var(--white-rgba);
   background-color: var(--seagull-block-active);
+}
+
+/* Animations */
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -100px);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: translate(-50%, 30px);
+    opacity: 0.7;
+  }
+
+  80% {
+    transform: translate(-50%, -10px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateX(-50%, 0);
+    opacity: 1;
+  }
 }
