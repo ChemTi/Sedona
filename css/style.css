@@ -79,6 +79,9 @@ img {
   display: block;
 }
 
+.modal-error {
+  animation: shake 0.6s;
+}
 /* -------------------------------container & grid------------------------------- */
 
 .page-body-catalog {
@@ -1383,7 +1386,8 @@ img {
   background-color: var(--seagull-block-active);
 }
 
-/* Animations */
+/*  -------------------------------Animations ------------------------------- */
+
 @keyframes bounce {
   0% {
     transform: translate(-50%, -100px);
@@ -1403,5 +1407,27 @@ img {
   100% {
     transform: translateX(-50%, 0);
     opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }

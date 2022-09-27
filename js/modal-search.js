@@ -15,7 +15,7 @@ buttonSearch.addEventListener("click", (e) => {
 // close modal by click outside
 document.addEventListener('click', (e) => {
   if (!e.target.closest(".modal-search"))
-    modal.classList.add("display-none")
+    modal.classList.remove("show");
 });
 
 // close modal by Escape
@@ -33,3 +33,59 @@ buttonFind.addEventListener("click", (e) => {
     alert("Вы не ввели дату ЗАЕЗДА или дату ВЫЕЗДА");
   } else localStorage.setItem(dateIn, dateIn.value);
 });
+
+/* --------------------------- other way & form validation -----------------------*/
+/*
+const form = modal.querySelector(".modal-search__form");
+
+let isStorageSupport = true;
+let storage = "";
+
+try {
+  storage = localStorage.setItem(dateIn.value);
+} catch (err) {
+  isStorageSupport = false;
+}
+
+buttonSearch.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.classList.add("show");
+  e.stopPropagation();
+
+  if (storage) {
+    dateIn.value = storage;
+    dateOut.focus();
+  } else {
+    dateIn.focus();
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest(".modal-search"))
+    modal.classList.remove("show");
+    modal.classList.remove("modal-error");
+});
+
+form.addEventListener('submit', (e) => {
+  if (!dateIn.value || !dateOut.value) {
+    e.preventDefault();
+    modal.classList.remove("modal-error");
+    modal.offsetWidth = modal.offsetWidth;
+    modal.classList.add("modal-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem(dateIn, dateIn.value);
+    }
+  }
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.keyCode === 27) {
+    if (modal.classList.contains("show")) {
+      e.preventDefault();
+      modal.classList.remove("show");
+      modal.classList.remove("modal-error");
+    }
+  }
+});
+*/
