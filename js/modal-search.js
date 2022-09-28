@@ -1,21 +1,25 @@
 const modal = document.querySelector(".modal-search");
 const buttonSearch = document.querySelector(".search__button-search");
 const buttonFind = modal.querySelector(".modal-search__button-find");
-const dateIn = modal.querySelector("[name=date-in]");
-const dateOut = modal.querySelector("[name=date-out]");
+const dateIn = modal.querySelector(".modal-search__date-in");
+const dateOut = modal.querySelector(".modal-search__date-out");
+const adults = modal.querySelector(".modal-search__adults-count");
+const kids = modal.querySelector(".modal-search__kids-count");
+const form = modal.querySelector(".modal-search__form");
 
+/*
 // open/close modal by button
 buttonSearch.addEventListener("click", (e) => {
   e.preventDefault();
-  modal.classList.toggle("show");
+  modal.classList.toggle("modal-show");
   e.stopPropagation();
-  // dateIn.focus();
+  // adults.focus();
 });
 
 // close modal by click outside
 document.addEventListener('click', (e) => {
   if (!e.target.closest(".modal-search"))
-    modal.classList.remove("show");
+    modal.classList.remove("modal-sh");
 });
 
 // close modal by Escape
@@ -28,64 +32,63 @@ window.addEventListener('keydown', (e) => {
 
 // ease validation
 buttonFind.addEventListener("click", (e) => {
-  if (!dateIn.value || !dateOut.value) {
+  if (!adults.value || !kids.value) {
     e.preventDefault();
     alert("Вы не ввели дату ЗАЕЗДА или дату ВЫЕЗДА");
-  } else localStorage.setItem(dateIn, dateIn.value);
+  } else localStorage.setItem(adults, adults.value);
 });
-
+*/
 /* --------------------------- other way & form validation -----------------------*/
-/*
-const form = modal.querySelector(".modal-search__form");
+
 
 let isStorageSupport = true;
 let storage = "";
 
 try {
-  storage = localStorage.setItem(dateIn.value);
+  storage = localStorage.setItem(adults.value);
 } catch (err) {
   isStorageSupport = false;
 }
 
 buttonSearch.addEventListener("click", (e) => {
   e.preventDefault();
-  modal.classList.add("show");
+  modal.classList.toggle("modal-show");
   e.stopPropagation();
 
   if (storage) {
-    dateIn.value = storage;
-    dateOut.focus();
+    adults.value = storage;
+    kids.focus();
   } else {
-    dateIn.focus();
+    adults.focus();
   }
 });
 
 document.addEventListener('click', (e) => {
   if (!e.target.closest(".modal-search"))
-    modal.classList.remove("show");
+    modal.classList.remove("modal-show");
     modal.classList.remove("modal-error");
 });
 
 form.addEventListener('submit', (e) => {
-  if (!dateIn.value || !dateOut.value) {
+  if (!adults.value || !kids.value || !dateIn.value || !dateOut.value) {
     e.preventDefault();
     modal.classList.remove("modal-error");
     modal.offsetWidth = modal.offsetWidth;
     modal.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
-      localStorage.setItem(dateIn, dateIn.value);
+      localStorage.setItem(adults, adults.value);
     }
   }
 });
 
 window.addEventListener('keydown', (e) => {
   if (e.keyCode === 27) {
-    if (modal.classList.contains("show")) {
+    if (modal.classList.contains("modal-show")) {
       e.preventDefault();
-      modal.classList.remove("show");
+      modal.classList.remove("modal-show");
       modal.classList.remove("modal-error");
     }
   }
 });
-*/
+
